@@ -183,6 +183,7 @@ export const Scene = () => {
     render();
   };
 
+  // OrbitControl 未使用
   const setOrbitCont = () => {
     orbitControls = new OrbitControls(camera, renderer.domElement);
     orbitControls.enableDamping = true; // 視点操作のイージングをONにする
@@ -195,7 +196,7 @@ export const Scene = () => {
   };
 
   // シーンのObject追加
-  const addPoint = ({ radius, segments, position }) => {
+  const addObject = ({ radius, segments, position }) => {
     const geometry = new THREE.CircleGeometry(radius, segments);
     const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
     const circle = new THREE.LineLoop(geometry, material);
@@ -216,7 +217,7 @@ export const Scene = () => {
     camera.lookAt(position);
   };
 
-  // パスとカーブを作成
+  // カメラのパスとカーブを作成
   const setCameraPositions = (positions) => {
     let vecPositions = positions.map((point) => {
       return new THREE.Vector3(point.x, point.y, point.z);
@@ -247,7 +248,7 @@ export const Scene = () => {
     CameraAnim.parent.add(mesh);
   };
 
-  // パスとカーブを作成
+  // 注視点のパスとカーブを作成
   const setTargetPositions = (positions) => {
     let vecPositions = positions.map((point) => {
       return new THREE.Vector3(point.x, point.y, point.z);
@@ -279,12 +280,14 @@ export const Scene = () => {
   };
 
   return {
+    //シーンを初期化
     init,
+    //アニメーション開始
     animate,
     //Orbit Controlを設定
     setOrbitCont,
     //対象オブジェクトを追加
-    addPoint,
+    addObject,
     // カメラの移動パスの作成
     setCameraPositions,
     // カメラの注視点移動パスの作成
