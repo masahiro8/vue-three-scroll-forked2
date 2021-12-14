@@ -2,17 +2,15 @@
   <div class="Main">
     <div id="loading" class="loading"></div>
     <ThreeScene :callInfoEvent="callInfoEvent" />
-    <div
-      v-for="item in objectInfo"
-      v-bind:key="item.id"
-      class="InfoView"
-      :class="isShowInfo ? 'show' : ''"
-    >
-      <h2>{{ item.number }}</h2>
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.content }}</p>
-      <p>{{ item.url }}</p>
+    <div class="InfoView" :class="isShowInfo ? 'show' : ''">
+      <div>
+        <h2>{{ selectedItem && selectedItem.number }}</h2>
+        <h2>{{ selectedItem && selectedItem.title }}</h2>
+        <p>{{ selectedItem && selectedItem.content }}</p>
+        <p>{{ selectedItem && selectedItem.url }}</p>
+      </div>
     </div>
+
     <ScrollNavi />
     <div id="contents" class="contents"></div>
   </div>
@@ -21,7 +19,7 @@
 <script>
 import ThreeScene from "../components/ThreeScene/index.vue";
 import ScrollNavi, { SECTIONS } from "../components/ScrollNavi/index";
-const objectInfo = [
+const OBJECT_INFO = [
   {
     id: 1,
     number: "#1",
@@ -119,37 +117,51 @@ const objectInfo = [
     url: "xxxxx.jpg",
   },
 ];
+
 export default {
   name: "Home",
   data: () => {
     return {
       isShowInfo: false,
-      objectInfo,
+      OBJECT_INFO,
+      selectedId: null,
     };
   },
   components: {
     ThreeScene,
     ScrollNavi,
   },
+
   computed: {
     SECTIONS() {
       return SECTIONS;
     },
+    selectedItem() {
+      const result = OBJECT_INFO.find((value) => {
+        return value.id === this.selectedId;
+      });
+      return result;
+    },
   },
+  // created() {
+  //   this.fetchData();
+  // },
   methods: {
+    // async fetchData() {
+    //   const response = await fetch(url);
+    //   const OBJECT_INFO = await response.json();
+    //   return OBJECT_INFO;
+    // },
+
     callInfoEvent({ move, progress, results }) {
       const f = results.find((item) => {
         return item.isFreeze == true;
       });
       this.isShowInfo = f && "id" in f ? true : false;
-      console.log(this.isShowInfo, f, move, progress);
 
+      console.log(this.isShowInfo, f, move, progress);
       if (this.isShowInfo == true) {
-        const result = objectInfo.filter((value) => {
-          return value.id === f.id;
-        });
-        this.objectInfo = result;
-        //console.log(f.id);
+        this.selectedId = f.id;
       }
     },
   },
