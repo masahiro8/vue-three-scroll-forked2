@@ -1,6 +1,6 @@
 <template>
   <div class="Main">
-    <div id="loading" class="loading"></div>
+    <Top id="loading" class="loading" />
     <ThreeScene :callInfoEvent="callInfoEvent" />
     <div class="InfoView" :class="isShowInfo ? 'show' : ''">
       <div>
@@ -19,6 +19,7 @@
 <script>
 import ThreeScene from "../components/ThreeScene/index.vue";
 import ScrollNavi, { SECTIONS } from "../components/ScrollNavi/index";
+import Top from "./Top.vue";
 const OBJECT_INFO = [
   {
     id: 1,
@@ -130,6 +131,7 @@ export default {
   components: {
     ThreeScene,
     ScrollNavi,
+    Top,
   },
 
   computed: {
@@ -168,12 +170,6 @@ export default {
 };
 </script>
 <style scoped>
-.loading {
-  width: 100vw;
-  height: 100vh;
-  background-color: blue;
-}
-
 .contents {
   width: 100vw;
   height: 1600px;
