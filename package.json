@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "sass": "^1.45.0",
+    "sass-loader": "^12.4.0",
     "three": "^0.135.0",
     "three-orbit-controls": "^82.1.0",
     "vue": "^2.6.11"
