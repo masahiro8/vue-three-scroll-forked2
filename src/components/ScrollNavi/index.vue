@@ -1,7 +1,21 @@
 <template>
   <div class="scrollNavi">
     <button v-if="navi.prev" @click.prevent="goPrev">Prev</button>
-    <button v-if="navi.next" @click.prevent="goNext">Next</button>
+    <a class="next-button" v-if="navi.next" @click.prevent="goNext">
+      <svg
+        width="71"
+        height="88"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M70.5 35.523c0 19.343-15.67 35.023-35 35.023S.5 54.866.5 35.523C.5 16.18 16.17.5 35.5.5s35 15.68 35 35.023Z"
+          stroke="#fff"
+        />
+        <path d="m22 44.648 13.5 13.5 13.5-13.5" stroke="#fff" />
+        <path d="m22 31.763 13.5 13.5 13.5-13.5M36 14v30.553" stroke="#fff" />
+      </svg>
+    </a>
   </div>
 </template>
 <script>
@@ -87,10 +101,15 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .scrollNavi {
   position: fixed;
   left: 50%;
-  bottom: 32px;
+  bottom: 18%;
+  max-width: 71px;
+  height: auto;
+  .next-button {
+    width: 100%;
+  }
 }
 </style>
