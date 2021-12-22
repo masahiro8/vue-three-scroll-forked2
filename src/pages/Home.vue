@@ -1,5 +1,5 @@
 <template>
-  <div class="Main">
+  <div class="main">
     <Top id="loading" class="loading" />
     <ThreeScene :callInfoEvent="callInfoEvent" />
     <div class="InfoView" :class="isShowInfo ? 'show' : ''">
@@ -13,6 +13,7 @@
 
     <ScrollNavi />
     <Contents />
+    <Footer />
   </div>
 </template>
 
@@ -21,6 +22,7 @@ import ThreeScene from "../components/ThreeScene/index.vue";
 import ScrollNavi, { SECTIONS } from "../components/ScrollNavi/index";
 import Top from "./Top.vue";
 import Contents from "./Contents.vue";
+import Footer from "./Footer.vue";
 
 const OBJECT_INFO = [
   {
@@ -133,6 +135,7 @@ export default {
     ScrollNavi,
     Top,
     Contents,
+    Footer,
   },
 
   computed: {
@@ -191,10 +194,10 @@ export default {
 .infoView-contents {
   margin: 2em 2em 0;
   .number {
-    font-size: 14px;
+    font-size: 0.875em;
   }
   .title {
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: 400;
     line-height: 1.2em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
@@ -202,7 +205,7 @@ export default {
     margin: 0;
   }
   .text {
-    font-size: 14px;
+    font-size: 0.875em;
     border-bottom: 1px solid;
     padding-bottom: 1rem;
     opacity: 60%;
