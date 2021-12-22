@@ -83,9 +83,6 @@ export default {
 </script>
 <style lang="scss">
 .contents {
-  width: 100vw;
-  height: 1600px;
-
   background-image: url("~@/assets/image/background.png");
 }
 .content-text-wrapper {
@@ -96,7 +93,7 @@ export default {
     margin-bottom: 5.5625em;
     h2 {
       margin: 0;
-      font-size: 36px;
+      font-size: 2.25em;
       font-weight: normal;
       letter-spacing: 0.435em;
     }
@@ -124,7 +121,7 @@ export default {
 .slide-button {
   display: flex;
   justify-content: flex-end;
-  margin: 1.25em 5em;
+  padding: 1.25em 5em;
   .slide-prev-button {
     margin-right: 1.5em;
   }

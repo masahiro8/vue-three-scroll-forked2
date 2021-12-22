@@ -35,14 +35,15 @@
   transform: translate(-50%, -50%);
   text-align: center;
   color: #ffffff;
+  width: 599px;
 
   .subtitle {
-    font-size: 24px;
+    font-size: 1.5em;
     margin: 0;
     letter-spacing: 0.435em;
   }
   .title {
-    font-size: 36px;
+    font-size: 2.25em;
     font-weight: normal;
     margin: 0;
     letter-spacing: 0.435em;
