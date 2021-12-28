@@ -24,6 +24,7 @@
           ><svg
             width="43"
             height="43"
+            viewBox="0 0 43 43"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -34,6 +35,7 @@
           ><svg
             width="43"
             height="43"
+            viewBox="0 0 43 43"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -51,8 +53,13 @@ export default {
   data: () => {
     return {
       hooperSettings: {
-        itemsToShow: 3.5,
         infiniteScroll: true,
+        itemsToShow: 2.1,
+        breakpoints: {
+          600: {
+            itemsToShow: 4.1,
+          },
+        },
       },
       images: [
         {
@@ -81,7 +88,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .contents {
   background-image: url("~@/assets/image/background.png");
 }
@@ -115,7 +122,7 @@ export default {
 
   .slide-image {
     height: 100%;
-    width: 20em;
+    width: 20vw;
   }
 }
 .slide-button {
@@ -124,6 +131,54 @@ export default {
   padding: 1.25em 5em;
   .slide-prev-button {
     margin-right: 1.5em;
+  }
+}
+@media screen and (max-width: 559px) {
+  .content-text-wrapper {
+    padding: 3.75em 1em 0;
+    .content-title {
+      inline-size: auto;
+      margin-bottom: 1em;
+      overflow-wrap: normal;
+      h2 {
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: normal;
+        letter-spacing: 0.4em;
+        line-height: 1.3em;
+      }
+    }
+    .content-text {
+      inline-size: auto;
+      margin-left: auto;
+      line-height: 1.8em;
+    }
+  }
+  .hooper {
+    height: 150px;
+  }
+  .slider {
+    margin-top: 0;
+  }
+  .hooper-slide {
+    padding: 0.625em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slide-image {
+      height: 100%;
+      width: 40vw;
+    }
+  }
+  .slide-button {
+    display: flex;
+    justify-content: center;
+    padding: 1em 0 1.5em;
+
+    .slide-prev-button {
+      margin-right: 2em;
+    }
   }
 }
 </style>

@@ -105,9 +105,11 @@ export default {
 .scrollNavi {
   position: fixed;
   left: 50%;
-  bottom: 18%;
+  bottom: 5%;
   max-width: 71px;
   height: auto;
+  transform: translate(-50%, 0);
+
   .next-button {
     width: 100%;
   }
