@@ -195,7 +195,25 @@ export const Scene = () => {
     orbitControls.enablePan = false;
   };
 
-  // シーンのObject追加
+  //GLTFの追加
+  // let model = null;
+  //   loader.load(
+  //       modelData,
+  //       function (gltf) {
+  //           model = gltf.scene;
+  //           model.scale.set(100.0, 100.0, 100.0);
+  //           model.position.set(0, -100, 0);
+  //           //回転の調整
+  //           //model.rotation.y = THREE.Math.DEG2RAD * -45;
+  //           scene.add(model);
+  //       },
+  //       function (error) {
+  //           console.log('An error happened');
+  //       }
+  //   );
+
+
+  //シーンのObject追加
   const addObject = ({ radius, segments, position }) => {
     const geometry = new THREE.CircleGeometry(radius, segments);
     const material = new THREE.LineBasicMaterial({ color: 0xff0000 });

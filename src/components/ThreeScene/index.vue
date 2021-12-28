@@ -8,7 +8,8 @@
   </div>
 </template>
 <script>
-import * as THREE from "three";
+//import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { Scene } from "./components/scene";
 import { STATE, EnterState } from "../../util/Events";
 
@@ -119,10 +120,17 @@ export default {
   },
   methods: {
     addObject() {
-      scene.addObject({
-        radius: 5,
-        segments: 32,
-        position: new THREE.Vector3(0.0, 0.0, 0.0),
+      // scene.addObject({
+      //   radius: 5,
+      //   segments: 32,
+      //   position: new THREE.Vector3(0.0, 0.0, 0.0),
+      // });
+      const loader = new GLTFLoader();
+      const url = "data_2.0.0.glb";
+      loader.load(url, (data) => {
+        const gltf = data;
+        const object = gltf.scene;
+        this.scene.add(object);
       });
 
       //カメラ移動パス作成
@@ -135,9 +143,13 @@ export default {
 };
 </script>
 <style scoped>
+body {
+  margin: 0;
+  overflow: hidden;
+}
 #three {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   /* border: 10px solid red; */
   box-sizing: border-box;
 }
