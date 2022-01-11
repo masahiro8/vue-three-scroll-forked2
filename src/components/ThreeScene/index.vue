@@ -8,8 +8,10 @@
   </div>
 </template>
 <script>
+// eslint-disable-next-line
 //import * as THREE from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+// eslint-disable-next-line
+import * as THREE from "three/build/three.module";
 import { Scene } from "./components/scene";
 import { STATE, EnterState } from "../../util/Events";
 
@@ -125,13 +127,14 @@ export default {
       //   segments: 32,
       //   position: new THREE.Vector3(0.0, 0.0, 0.0),
       // });
-      const loader = new GLTFLoader();
-      const url = "data_2.0.0.glb";
-      loader.load(url, (data) => {
-        const gltf = data;
-        const object = gltf.scene;
-        this.scene.add(object);
-      });
+      // const loader = new GLTFLoader();
+      // const url = "/public/data/desk_v2.gltf";
+      // loader.load(url, (data) => {
+      //   const gltf = data;
+      //   const object = gltf.scene;
+      //   this.scene.add(object);
+      // });
+      scene.addGLTF("/data/data_2.0.0.glb");
 
       //カメラ移動パス作成
       scene.setCameraPositions(cameraPositions);
