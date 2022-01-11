@@ -1,5 +1,9 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// eslint-disable-next-line
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
+// import modelDataUrl from "../../data_2.0.0.glb";
 
 export const Scene = () => {
   let scene;
@@ -196,21 +200,17 @@ export const Scene = () => {
   };
 
   //GLTFの追加
-  // let model = null;
-  //   loader.load(
-  //       modelData,
-  //       function (gltf) {
-  //           model = gltf.scene;
-  //           model.scale.set(100.0, 100.0, 100.0);
-  //           model.position.set(0, -100, 0);
-  //           //回転の調整
-  //           //model.rotation.y = THREE.Math.DEG2RAD * -45;
-  //           scene.add(model);
-  //       },
-  //       function (error) {
-  //           console.log('An error happened');
-  //       }
-  //   );
+  const addGLTF = (url) => {
+    console.log("gltf");
+    const gltfLoader = new GLTFLoader();
+  gltfLoader.load(url, function (data) {
+    const gltf = data;
+    console.log(gltf);
+    const object = gltf.scene;
+    scene.add(object);
+  });
+  }
+  
 
 
   //シーンのObject追加
@@ -306,6 +306,8 @@ export const Scene = () => {
     setOrbitCont,
     //対象オブジェクトを追加
     addObject,
+    //
+    addGLTF,
     // カメラの移動パスの作成
     setCameraPositions,
     // カメラの注視点移動パスの作成
