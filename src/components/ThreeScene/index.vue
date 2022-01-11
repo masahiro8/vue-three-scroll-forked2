@@ -172,7 +172,7 @@
         //注視点パス作成
         scene.setTargetPositions(targetPositons);
 
-        scene.setOrbitCont();
+        // scene.setOrbitCont();
       },
     },
   };

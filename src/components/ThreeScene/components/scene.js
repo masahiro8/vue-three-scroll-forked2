@@ -16,9 +16,6 @@ export const Scene = () => {
   let splineCamera;
   let cameraHelper;
 
-  //スプラインアニメのダミー点
-  let splineControlPoint;
-
   // 注視点
   let targetObject;
 
@@ -67,6 +64,7 @@ export const Scene = () => {
   }) => {
     scene = new THREE.Scene();
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.gammaOutput = true;
     renderer.setClearColor(0xffff00, 1);
     renderer.setSize(width, height);
     renderer.setPixelRatio(
@@ -265,7 +263,7 @@ export const Scene = () => {
       return new THREE.Vector3(point.x, point.y, point.z);
     });
 
-    CameraAnim.curve = new THREE.CatmullRomCurve3(vecPositions, true); // 閉じるフラグ
+    CameraAnim.curve = new THREE.CatmullRomCurve3(vecPositions, false); // 閉じるフラグ
 
     const points = CameraAnim.curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
@@ -296,7 +294,7 @@ export const Scene = () => {
       return new THREE.Vector3(point.x, point.y, point.z);
     });
 
-    TargetAnim.curve = new THREE.CatmullRomCurve3(vecPositions, true); // 閉じるフラグ
+    TargetAnim.curve = new THREE.CatmullRomCurve3(vecPositions, false); // 閉じるフラグ
 
     const points = TargetAnim.curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
