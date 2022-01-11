@@ -1,5 +1,9 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+// eslint-disable-next-line
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
+// import modelDataUrl from "../../data_2.0.0.glb";
 
 export const Scene = () => {
   let scene;
@@ -195,7 +199,21 @@ export const Scene = () => {
     orbitControls.enablePan = false;
   };
 
-  // シーンのObject追加
+  //GLTFの追加
+  const addGLTF = (url) => {
+    console.log("gltf");
+    const gltfLoader = new GLTFLoader();
+  gltfLoader.load(url, function (data) {
+    const gltf = data;
+    console.log(gltf);
+    const object = gltf.scene;
+    scene.add(object);
+  });
+  }
+  
+
+
+  //シーンのObject追加
   const addObject = ({ radius, segments, position }) => {
     const geometry = new THREE.CircleGeometry(radius, segments);
     const material = new THREE.LineBasicMaterial({ color: 0xff0000 });
@@ -288,6 +306,8 @@ export const Scene = () => {
     setOrbitCont,
     //対象オブジェクトを追加
     addObject,
+    //
+    addGLTF,
     // カメラの移動パスの作成
     setCameraPositions,
     // カメラの注視点移動パスの作成

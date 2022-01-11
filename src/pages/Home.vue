@@ -2,12 +2,53 @@
   <div class="main">
     <Top id="loading" class="loading" />
     <ThreeScene :callInfoEvent="callInfoEvent" />
+    <Modal :val="postItem" v-show="showContent" @close="closeModal" />
     <div class="InfoView" :class="isShowInfo ? 'show' : ''">
       <div class="infoView-contents">
         <p class="number">{{ selectedItem && selectedItem.number }}</p>
         <h2 class="title">{{ selectedItem && selectedItem.title }}</h2>
         <p class="text">{{ selectedItem && selectedItem.text }}</p>
         <p>{{ selectedItem && selectedItem.image }}</p>
+
+        <div class="slider">
+          <hooper :settings="hooperSettings" ref="carousel">
+            <slide
+              v-for="(image, indx) in selectedItem && selectedItem.images"
+              :key="indx"
+              :index="indx"
+            >
+              <div>
+                <img
+                  class="slide-image"
+                  :src="image.src"
+                  @click="openModal(image)"
+                />
+              </div>
+            </slide>
+          </hooper>
+          <div class="slide-button">
+            <a class="slide-prev-button" @click.prevent="slidePrev"
+              ><svg
+                width="43"
+                height="43"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="21.5" cy="21.5" r="21" stroke="#fff" />
+                <path d="m15 18-5 5h23" stroke="#fff" /></svg
+            ></a>
+            <a class="slide-next-button" @click.prevent="slideNext"
+              ><svg
+                width="43"
+                height="43"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="21.5" cy="21.5" r="21" stroke="#fff" />
+                <path d="m28 18 5 5H10" stroke="#fff" /></svg
+            ></a>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -20,9 +61,12 @@
 <script>
 import ThreeScene from "../components/ThreeScene/index.vue";
 import ScrollNavi, { SECTIONS } from "../components/ScrollNavi/index";
+import Modal from "../components/Modal/index.vue";
 import Top from "./Top.vue";
 import Contents from "./Contents.vue";
 import Footer from "./Footer.vue";
+import { Hooper, Slide } from "hooper";
+import "hooper/dist/hooper.css";
 
 const OBJECT_INFO = [
   {
@@ -125,17 +169,38 @@ export default {
   name: "Home",
   data: () => {
     return {
+      item: [],
       isShowInfo: false,
       OBJECT_INFO,
       selectedId: null,
+      showContent: false,
+      postItem: "",
+      hooperSettings: {
+        infiniteScroll: true,
+        itemsToShow: 1.3,
+        breakpoints: {
+          600: {
+            itemsToShow: 1.5,
+          },
+          800: {
+            itemsToShow: 1.5,
+          },
+          1200: {
+            itemsToShow: 2.1,
+          },
+        },
+      },
     };
   },
   components: {
     ThreeScene,
     ScrollNavi,
+    Modal,
     Top,
     Contents,
     Footer,
+    Hooper,
+    Slide,
   },
 
   computed: {
@@ -152,12 +217,27 @@ export default {
   // created() {
   //   this.fetchData();
   // },
+
   methods: {
-    // async fetchData() {
-    //   const response = await fetch(url);
-    //   const OBJECT_INFO = await response.json();
-    //   return OBJECT_INFO;
-    // },
+    async fetchData() {
+      const response = await fetch("/objectInfo.json");
+      const json = await response.json();
+      this.item = json;
+    },
+    openModal(image) {
+      this.showContent = true;
+      this.postItem = image;
+    },
+    closeModal() {
+      this.showContent = false;
+    },
+
+    slidePrev() {
+      this.$refs.carousel.slidePrev();
+    },
+    slideNext() {
+      this.$refs.carousel.slideNext();
+    },
 
     callInfoEvent({ move, progress, results }) {
       const f = results.find((item) => {
@@ -175,8 +255,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 .InfoView {
-  width: 429px;
-  height: 100vh;
+  max-width: 429px;
+  width: 40vw;
+  height: 100%;
   background-color: #56514b;
   color: white;
   position: fixed;
@@ -185,6 +266,7 @@ export default {
   transition: all 0.3s ease-out;
   transform: translateX(429px);
   z-index: 9;
+  overflow: auto;
 }
 
 .InfoView.show {
@@ -201,13 +283,13 @@ export default {
     font-weight: 400;
     line-height: 1.2em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
     margin: 0;
   }
   .text {
     font-size: 0.875em;
     border-bottom: 1px solid;
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
     opacity: 60%;
   }
   .slide__wrapper {
@@ -234,6 +316,115 @@ export default {
     font-size: 50px;
     font-weight: bold;
     color: #fff;
+  }
+
+  .slider {
+    margin-top: 32px;
+    .hooper {
+      height: 15vh;
+    }
+  }
+  .hooper-slide {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .slide-image {
+      height: 100%;
+      width: 10vw;
+    }
+  }
+  .slide-button {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5em 1em;
+    .slide-prev-button {
+      margin-right: 1.5em;
+    }
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .InfoView {
+    width: 50vw;
+    height: 100%;
+  }
+  ::v-deep .hooper {
+    height: 15vh;
+  }
+  .infoView-contents {
+    .hooper-slide {
+      .slide-image {
+        width: 18vw;
+      }
+    }
+  }
+}
+@media screen and (max-width: 559px) {
+  .InfoView {
+    width: 70vw;
+    height: 100%;
+  }
+  .infoView-contents {
+    margin: 1em 1em 0;
+    .number {
+      font-size: 0.875em;
+    }
+    .title {
+      font-size: 1.25em;
+      padding-bottom: 0.5em;
+      line-height: 1.5em;
+      margin: 0;
+    }
+    .image {
+      width: 100%;
+    }
+    .right-btn {
+      position: absolute;
+      right: 20px;
+      top: 41%;
+      font-size: 50px;
+      font-weight: bold;
+      color: #fff;
+    }
+    .left-btn {
+      position: absolute;
+      left: 20px;
+      top: 41%;
+      font-size: 25px;
+      font-size: 50px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .slider {
+      margin-top: 0;
+      .hooper {
+        height: 15vh;
+      }
+    }
+    .hooper-slide {
+      padding: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .slide-image {
+        height: 100%;
+        width: 40vw;
+      }
+    }
+    .slide-button {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 0.5em 0.5em;
+      .slide-prev-button {
+        margin-right: 1.2em;
+      }
+    }
+  }
+  ::v-deep .hooper {
+    height: 15vh;
   }
 }
 </style>

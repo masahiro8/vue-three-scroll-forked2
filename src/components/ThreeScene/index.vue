@@ -8,7 +8,10 @@
   </div>
 </template>
 <script>
-import * as THREE from "three";
+// eslint-disable-next-line
+//import * as THREE from "three";
+// eslint-disable-next-line
+import * as THREE from "three/build/three.module";
 import { Scene } from "./components/scene";
 import { STATE, EnterState } from "../../util/Events";
 
@@ -119,11 +122,19 @@ export default {
   },
   methods: {
     addObject() {
-      scene.addObject({
-        radius: 5,
-        segments: 32,
-        position: new THREE.Vector3(0.0, 0.0, 0.0),
-      });
+      // scene.addObject({
+      //   radius: 5,
+      //   segments: 32,
+      //   position: new THREE.Vector3(0.0, 0.0, 0.0),
+      // });
+      // const loader = new GLTFLoader();
+      // const url = "/public/data/desk_v2.gltf";
+      // loader.load(url, (data) => {
+      //   const gltf = data;
+      //   const object = gltf.scene;
+      //   this.scene.add(object);
+      // });
+      scene.addGLTF("/data/data_2.0.0.glb");
 
       //カメラ移動パス作成
       scene.setCameraPositions(cameraPositions);
@@ -135,9 +146,13 @@ export default {
 };
 </script>
 <style scoped>
+body {
+  margin: 0;
+  overflow: hidden;
+}
 #three {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   /* border: 10px solid red; */
   box-sizing: border-box;
 }
