@@ -1,6 +1,16 @@
 <template>
   <div class="main">
+    <div class="header">
+      <ul class="header-content">
+        <li><img class="icon" src="@/assets/logo.png" /></li>
+        <li class="header-text">
+          <p class="subtitle">沖縄本土復帰50周年</p>
+          <p class="title">知る32軍壕</p>
+        </li>
+      </ul>
+    </div>
     <Top id="loading" class="loading" />
+    <About id="loading" class="loading" />
     <ThreeScene :callInfoEvent="callInfoEvent" />
     <Modal :val="postItem" v-show="showContent" @close="closeModal" />
     <div class="InfoView" :class="isShowInfo ? 'show' : ''">
@@ -107,6 +117,7 @@ import ThreeScene from "../components/ThreeScene/index.vue";
 import ScrollNavi, { SECTIONS } from "../components/ScrollNavi/index";
 import Modal from "../components/Modal/index.vue";
 import Top from "./Top.vue";
+import About from "./About.vue";
 import Contents from "./Contents.vue";
 import Footer from "./Footer.vue";
 import { Hooper, Slide } from "hooper";
@@ -318,6 +329,7 @@ export default {
     ScrollNavi,
     Modal,
     Top,
+    About,
     Contents,
     Footer,
     Hooper,
@@ -375,6 +387,42 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.header {
+  position: fixed; /* ヘッダーを固定する */
+  top: 0; /* 上部から配置の基準位置を決める */
+  left: 0; /* 左から配置の基準位置を決める */
+  width: 100%; /* ヘッダーの横幅を指定する */
+  z-index: 5;
+  .header-content {
+    width: 100%; /* コンテンツの横幅を指定する */
+    overflow: auto; /* コンテンツの表示を自動に設定（スクロール） */
+    margin: 1.875em 0 0 1.875em;
+    padding: 0;
+    .icon {
+      width: 48px;
+    }
+    li {
+      float: left;
+      list-style: none;
+    }
+    .header-text {
+      margin-left: 0.875em;
+      color: #ffffff;
+      opacity: 0.4;
+      letter-spacing: 0.435em;
+    }
+    .subtitle {
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      font-size: 16px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
 .InfoView {
   max-width: 429px;
   width: 40vw;
