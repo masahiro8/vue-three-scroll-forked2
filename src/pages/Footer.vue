@@ -1,20 +1,83 @@
 <template>
   <div class="fotter">
     <div class="fotter-contents">
-      <p class="subtitle">沖縄本土復帰50周年</p>
-      <h2 class="title">OKINAWA 第32軍壕</h2>
-
-      <p class="text">System Supported By</p>
-      <p class="subtitle">BACKHAM</p>
-      <p class="text">
-        沖縄タイムスのコンテンツにご興味のある方は<br />
-        こちらからお申し込みください
-      </p>
-      <div class="box">
-        <img
-          class="logo-image"
-          src="@/assets/image/okinawa-times-plus_logo.png"
-        />
+      <div class="footer-text">
+        <h2>第2章への案内</h2>
+        <p>
+          南部撤退を決めた３２軍。近日公開の第2章では、米軍の猛攻撃が続く中、どうやって衰退したのか。海岸まで追い込まれた３２軍の組織的戦闘は、どう終焉を迎えたのかを伝える。
+        </p>
+      </div>
+      <div class="footer-text">
+        <h2>参考・引用文献（５０音順）</h2>
+        <p>・朝日新聞社編「知る沖縄戦」（2021年、朝日新聞社）</p>
+        <p>
+          ・アメリカ陸軍省戦史局編「沖縄戦&emsp;第二次世界大戦最後の戦い」（2011年、出版舎Mugen）
+        </p>
+        <p>
+          ・牛島貞満著「首里城地下&emsp;第３２軍司令部壕」（2021年、高文研）
+        </p>
+        <p>
+          ・沖縄県教育庁文化財課史料編集班編「沖縄県史&emsp;資料編２３&emsp;沖縄戦日本軍史料&emsp;沖縄戦６」（2012年、沖縄県教育委員会）
+        </p>
+        <p>
+          ・沖縄県文化振興会編「沖縄県史&emsp;資料編３&emsp;米国新聞にみる沖縄戦報道」（1997年、沖縄県教育委員会）
+        </p>
+        <p>
+          ・沖縄県女師・一高女ひめゆり平和記念財団立&emsp;ひめゆり平和祈念資料館編「ひめゆり平和祈念資料館&emsp;資料集４&emsp;沖縄戦の全学徒隊」（2008年、沖縄県女師・一高女ひめゆり平和記念財団立&emsp;ひめゆり平和祈念資料館）
+        </p>
+        <p>・沖縄県立埋蔵文化財センター著「沖縄県の戦争遺跡」（2015年）</p>
+        <p>・大田昌秀著「沖縄の挑戦」（1990年、恒文社）</p>
+        <p>・大田昌秀著「沖縄健児隊」（1953年、日本出版協同）</p>
+        <p>
+          ・大田昌秀著「沖縄戦を生きた子どもたち」（2007年、クリエイティブ２１）
+        </p>
+        <p>・兼城一著「沖縄一中・鉄血勤皇隊の記録（上）」（2000年、高文研）</p>
+        <p>・兼城一著「沖縄一中・鉄血勤皇隊の記録 下」（2005年、高文研）</p>
+        <p>
+          ・田村洋三著「沖縄一中鉄血勤皇隊&emsp;学徒の盾となった隊長&emsp;篠原保司」（2010年、光人社）
+        </p>
+        <p>
+          ・出口範樹編「丸別冊&emsp;第１３号&emsp;最後の戦闘&emsp;沖縄・硫黄島戦記」（1989年、潮書房）
+        </p>
+        <p>・米軍情報報告書「Intelligence Monograph」</p>
+        <p>
+          ・防衛庁防衛研修所戦史室著「戦史叢書&emsp;沖縄・臺灣・硫黄島方面&emsp;陸軍航空作戦」（1970年、朝雲新聞社）
+        </p>
+        <p>
+          ・防衛庁防衛研究所戦史部著「戦史叢書&emsp;沖縄方面陸軍作戦」（1968年、朝雲新聞社）
+        </p>
+        <p>
+          ・八原博通著「沖縄決戦&emsp;―高級参謀の手記」（2015年、中央公論新社）
+        </p>
+        <p>・山川泰邦著「秘録&emsp;沖縄戦史」（1958年、沖縄グラフ社）</p>
+      </div>
+      <div class="footer-ads">
+        <p class="text">
+          沖縄タイムスのコンテンツにご興味のある方は<br />
+          こちらからお申し込みください
+        </p>
+        <div class="box">
+          <img
+            class="logo-image"
+            src="@/assets/image/okinawa-times-plus_logo.png"
+          />
+        </div>
+      </div>
+      <div class="footer-text">
+        <h2>クレジット</h2>
+        <p>・取材&emsp;山中由睦（沖縄タイムス）、大城志織（沖縄タイムス）</p>
+        <p>・撮影&emsp;下地広也（沖縄タイムス）</p>
+        <p>・動画編集&emsp;儀武勝希（沖縄タイムス）</p>
+        <p>・グラフィック制作&emsp;池間寿和子（沖縄タイムス）</p>
+        <p>
+          ・ＷＥＢデザイン・制作&emsp;黒川正裕、大田小波（ともに株式会社バッカム）
+        </p>
+        <p>
+          ・監修協力&emsp;仲村真（沖縄県平和祈念資料館友の会事務局長）、吉浜忍（元沖縄国際大教授）、佐治暁人（大阪経済法科大学アジア太平洋研究センター客員研究員）
+        </p>
+        <p>
+          ・資料提供&emsp;牛島貞満、沖縄県公文書館、沖本富貴子、佐治暁人、那覇市歴史博物館
+        </p>
       </div>
     </div>
   </div>
@@ -39,10 +102,29 @@
 }
 .fotter-contents {
   text-align: center;
-  padding: 10.8125em 0;
   color: #ffffff;
   position: relative;
   z-index: 1;
+  padding-bottom: 13.75em;
+  .footer-text {
+    width: 64em;
+    margin: auto;
+    padding-top: 6.5em;
+    h2 {
+      font-weight: normal;
+      padding-bottom: 1.875em;
+      letter-spacing: 0.1em;
+    }
+    p {
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      margin: 0;
+      text-align: left;
+    }
+  }
+  .footer-ads {
+    padding-top: 7.5em;
+  }
   .subtitle {
     font-size: 1.5em;
     margin: 0;
@@ -55,7 +137,7 @@
     letter-spacing: 0.435em;
   }
   .text {
-    font-size: 1.125em;
+    font-size: 18px;
     letter-spacing: 0.1em;
   }
   .box {
