@@ -37,18 +37,23 @@ const targetPositons = [
 
 // イベント
 export const callbackEvents = [
-  { id: 1, start: 0.07, length: 0.1 },
-  { id: 2, start: 0.15, length: 0.1 },
-  { id: 3, start: 0.23, length: 0.1 },
-  { id: 4, start: 0.3, length: 0.1 },
-  { id: 5, start: 0.37, length: 0.1 },
-  { id: 6, start: 0.44, length: 0.1 },
-  { id: 7, start: 0.51, length: 0.1 },
-  { id: 8, start: 0.58, length: 0.1 },
-  { id: 9, start: 0.65, length: 0.1 },
-  { id: 10, start: 0.72, length: 0.1 },
-  { id: 11, start: 0.79, length: 0.1 },
-  { id: 12, start: 0.86, length: 0.1 },
+  { id: 1, start: 0.05, length: 0.1 },
+  { id: 2, start: 0.1, length: 0.1 },
+  { id: 3, start: 0.15, length: 0.1 },
+  { id: 4, start: 0.2, length: 0.1 },
+  { id: 5, start: 0.25, length: 0.1 },
+  { id: 6, start: 0.3, length: 0.1 },
+  { id: 7, start: 0.35, length: 0.1 },
+  { id: 8, start: 0.4, length: 0.1 },
+  { id: 9, start: 0.45, length: 0.1 },
+  { id: 10, start: 0.5, length: 0.1 },
+  { id: 11, start: 0.55, length: 0.1 },
+  { id: 12, start: 0.6, length: 0.1 },
+  { id: 13, start: 0.65, length: 0.1 },
+  { id: 14, start: 0.7, length: 0.1 },
+  { id: 15, start: 0.75, length: 0.1 },
+  { id: 16, start: 0.8, length: 0.1 },
+  { id: 17, start: 0.85, length: 0.1 },
 ];
 
 export default {
