@@ -149,9 +149,11 @@ export const Scene = () => {
       .multiplyScalar(pickt - pick)
       .add(anim.tubeGeometry.binormals[pick]);
     anim.tubeGeometry.parameters.path.getTangentAt(t, anim.direction);
-    const offset = 0;
+    // const offset = 0;
+    // CameraAnim.normal.copy(anim.binormal).cross(new THREE.Vector3(0, 1, 0));
     CameraAnim.normal.copy(anim.binormal).cross(anim.direction);
-    anim.position.add(anim.normal.clone().multiplyScalar(offset));
+    // CameraAnim.normal.copy(anim.binormal);
+    // anim.position.add(anim.normal.clone().multiplyScalar(offset));
     target.position.copy(anim.position);
     anim.tubeGeometry.parameters.path.getPointAt(
       (t + 30 / anim.tubeGeometry.parameters.path.getLength()) % 1,
@@ -173,7 +175,7 @@ export const Scene = () => {
       // 注視オブジェクト
       const lookatPosition = lookAtObjects[0].position;
 
-      CameraAnim.lookAt.multiplyScalar(2);
+      // CameraAnim.lookAt.multiplyScalar(2);
       CameraAnim.lookAt.copy(lookatPosition).add(CameraAnim.direction);
 
       splineCamera.matrix.lookAt(

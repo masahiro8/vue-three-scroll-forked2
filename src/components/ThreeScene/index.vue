@@ -18,7 +18,7 @@
   let scene;
 
   //固定スクロールする範囲
-  const fixLength = 5000;
+  const fixLength = 10000;
 
   // // カメラの移動座標
   // const cameraPositions = [
@@ -37,29 +37,66 @@
 
   // カメラの移動座標
   const cameraPositions = [
-    { x: 20, y: 30, z: 0 },
-    { x: 1.8, y: 1.2, z: 0 },
+    { x: 30, y: 10.0, z: 45 },
+    { x: 5, y: 1.0, z: 0 },
+    { x: 0, y: 1.0, z: 0 },
     { x: -4, y: 1.2, z: 0 },
-    { x: -15, y: 1.2, z: 0 },
-    { x: -17, y: 1.2, z: 0 },
     { x: -19, y: 1.2, z: 0 },
-    { x: -20, y: 1.2, z: 0 },
+    { x: -20, y: 1.2, z: -2 },
+    { x: -20.5, y: 1.2, z: -2.5 },
+    { x: -21, y: 1.2, z: -2 },
+    { x: -22, y: 1.2, z: -0.5 },
+    { x: -23, y: 1.2, z: 0 },
+    { x: -30, y: 1.2, z: 0 },
+    { x: -70, y: 1.2, z: 0 },
+    { x: -71, y: 1.2, z: 0 },
+    { x: -72, y: 1.2, z: -0.5 },
+    { x: -73, y: 1.2, z: -1 },
+    { x: -74, y: 1.2, z: -0.5 },
+    { x: -75, y: 1.2, z: 0 },
+    { x: -76, y: 1.2, z: 0 },
+    { x: -104, y: 1.2, z: 0 },
+    { x: -106, y: 1.2, z: 0 },
+    { x: -131, y: 9, z: 4 },
+    { x: -135, y: 8.5, z: 4 },
+    { x: -150, y: 8.5, z: 4 },
+    { x: -190, y: 8.5, z: 4 },
   ];
 
   // 注視点の移動座標
   const targetPositons = [
+    { x: -55, y: 0.3, z: 0 },
+    { x: 2, y: 0.3, z: 0 },
     { x: 0, y: 0.3, z: 0 },
     { x: 0, y: 0.3, z: 0 },
     { x: -1, y: 0.3, z: 0 },
-    { x: -10, y: 0.3, z: 0 },
-    { x: -21, y: 0.3, z: 0 },
-    { x: -22, y: 0.3, z: 0 },
-    { x: -23, y: 0.3, z: 0 },
+    { x: -5, y: 0.3, z: 0 },
+    { x: -15, y: 0.3, z: 0 },
+    { x: -20, y: 0.3, z: 0 },
+    { x: -20, y: 0.3, z: -2 },
+    { x: -22, y: 0.3, z: -6 }, // 横
+    { x: -24, y: 0.3, z: -2 },
+    { x: -25, y: 0.3, z: 0 },
+    { x: -26, y: 0.3, z: 0 },
+    { x: -71, y: 0.3, z: 0 },
+    { x: -72, y: 0.3, z: 0 },
+    { x: -73, y: 2, z: 1 },
+    { x: -74.5, y: 10, z: 4 }, //shaftB
+    { x: -75, y: 2, z: 1 },
+    { x: -75.5, y: 0.3, z: 0 },
+    { x: -76, y: 0.3, z: 0 },
+    { x: -77, y: 0.3, z: 0 },
+    { x: -100, y: 0.3, z: 0 },
+    { x: -105, y: 0.3, z: 0 },
+    { x: -130, y: 8.5, z: 4 },
+    { x: -135, y: 8.5, z: 4 },
+    { x: -150, y: 8.5, z: 4 },
+    { x: -210, y: 8.5, z: 4 },
   ];
 
   // イベント
   export const callbackEvents = [
-    { id: 1, start: 0.07, length: 0.1 },
+    // { id: 1, start: 0.07, length: 0.1 },
     // { id: 2, start: 0.15, length: 0.1 },
     // { id: 3, start: 0.23, length: 0.1 },
     // { id: 4, start: 0.3, length: 0.1 },
@@ -70,10 +107,10 @@
     // { id: 9, start: 0.65, length: 0.1 },
     // { id: 10, start: 0.72, length: 0.1 },
     // { id: 11, start: 0.79, length: 0.1 },
-    // { id: 12, start: 0.86, length: 0.1 },
+    { id: 12, start: 0.86, length: 0.1 },
   ];
 
-  const modelUrl = "/data/data_2.0.6_objects.glb";
+  const modelUrl = "/data/data.glb";
 
   export default {
     name: "ThreeScene",
@@ -187,6 +224,7 @@
     height: 100%;
     /* border: 10px solid red; */
     box-sizing: border-box;
+    transform: scaleY(-1) scaleX(-1);
   }
 
   .wrapper {
