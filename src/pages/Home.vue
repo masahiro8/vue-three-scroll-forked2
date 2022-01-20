@@ -1,5 +1,8 @@
 <template>
   <div class="main">
+    <transition name="fade">
+      <Loading v-if="!isLoaded" />
+    </transition>
     <div class="header">
       <ul class="header-content">
         <li><img class="icon" src="@/assets/logo.png" /></li>
@@ -9,19 +12,20 @@
         </li>
       </ul>
     </div>
-    <Top id="loading" class="loading" />
-    <About id="loading" class="loading" />
-    <ThreeScene :callInfoEvent="callInfoEvent" />
-    <Modal
-      v-if="false"
-      :val="postItem"
-      v-show="showContent"
-      @close="closeModal"
-    />
-    <InfoView :isShowInfo="isShowInfo" :selectedItem="selectedItem" />
-    <ScrollNavi />
-    <Contents :items="articles" />
-    <Footer />
+    <div v-if="isLoaded">
+      <Top v-if="isLoaded" :src="getHeadMovie" id="loading" class="loading" />
+      <About v-if="isLoaded" id="loading" class="loading" />
+      <ThreeScene
+        v-if="isLoaded"
+        :src="getGLTFModel"
+        :callInfoEvent="callInfoEvent"
+      />
+      <Modal :val="postItem" v-show="showContent" @close="closeModal" />
+      <InfoView :isShowInfo="isShowInfo" :selectedItem="selectedItem" />
+      <ScrollNavi />
+      <Contents :items="articles" />
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -34,8 +38,11 @@
   import Contents from "./Contents.vue";
   import Footer from "./Footer.vue";
   import InfoView from "../components/InfoView/index.vue";
+  import Loading from "../components/Loading/index.vue";
   import { popups } from "../assets/popups";
   import { articles } from "../assets/articles";
+  import { ASSETS } from "../assets/assets";
+  import { loader } from "../util/loader";
 
   const OBJECT_INFO = popups;
 
@@ -43,6 +50,10 @@
     name: "Home",
     data: () => {
       return {
+        ASSETS: {
+          HEAD_MOVIE: null,
+        },
+        isLoaded: false,
         articles,
         item: [],
         isShowInfo: false,
@@ -67,6 +78,9 @@
         },
       };
     },
+    async mounted() {
+      this.onLoadAssets();
+    },
     components: {
       ThreeScene,
       ScrollNavi,
@@ -76,6 +90,7 @@
       Contents,
       Footer,
       InfoView,
+      Loading,
     },
 
     computed: {
@@ -88,12 +103,31 @@
         });
         return result;
       },
+      getHeadMovie() {
+        return this.ASSETS.HEAD_MOVIE?.src;
+      },
+      getGLTFModel() {
+        return this.ASSETS.GLTF_MODEL?.src;
+      },
     },
     methods: {
-      async fetchData() {
-        const response = await fetch("/objectInfo.json");
-        const json = await response.json();
-        this.item = json;
+      /**
+       * ローディング
+       */
+      async onLoadAssets() {
+        const _ASSETS = await loader().getFiles([
+          ASSETS.HEAD_MOVIE,
+          ASSETS.GLTF_MODEL,
+        ]);
+
+        this.ASSETS = {
+          HEAD_MOVIE: _ASSETS.find((item) => item.key === "HEAD_MOVIE"),
+          GLTF_MODEL: _ASSETS.find((item) => item.key === "GLTF_MODEL"),
+        };
+
+        setTimeout(() => {
+          this.isLoaded = true;
+        }, 1000);
       },
       openModal(image) {
         this.showContent = true;
@@ -161,187 +195,15 @@
       }
     }
   }
-  .InfoView {
-    max-width: 429px;
-    width: 40vw;
-    height: 100%;
-    background-color: #56514b;
-    color: white;
-    position: fixed;
-    right: 0;
-    top: 0;
-    transition: all 0.3s ease-out;
-    transform: translateX(429px);
-    z-index: 9;
-    overflow: auto;
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all 2s ease-in;
   }
-
-  .InfoView.show {
-    transform: translateX(0);
-  }
-
-  .infoView-contents {
-    margin: 2em 2em 0;
-    .number {
-      font-size: 0.875em;
-    }
-    .title {
-      font-size: 1.5em;
-      font-weight: 400;
-      line-height: 1.2em;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-      padding-bottom: 1em;
-      margin: 0;
-    }
-    .text {
-      font-size: 0.875em;
-      // border-bottom: 1px solid;
-      // padding-bottom: 1em;
-      opacity: 60%;
-    }
-    .slide__wrapper {
-      position: relative;
-      width: 40%;
-      margin: 0 auto;
-    }
-    .image {
-      width: 100%;
-    }
-    .right-btn {
-      position: absolute;
-      right: 20px;
-      top: 41%;
-      font-size: 50px;
-      font-weight: bold;
-      color: #fff;
-    }
-    .left-btn {
-      position: absolute;
-      left: 20px;
-      top: 41%;
-      font-size: 25px;
-      font-size: 50px;
-      font-weight: bold;
-      color: #fff;
-    }
-
-    .slider {
-      margin-top: 32px;
-      .hooper {
-        height: 26vh;
-      }
-    }
-    .hooper-track {
-      height: 0;
-    }
-    .hooper-slide {
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      .slide-caption {
-        font-size: 10px;
-      }
-      .slide-content-wrapper {
-        text-align: center;
-      }
-
-      .slide-image {
-        height: 100%;
-        width: 10vw;
-      }
-    }
-    .slide-button {
-      display: flex;
-      justify-content: flex-end;
-      padding: 0.5em 1em;
-      .slide-prev-button {
-        margin-right: 1.5em;
-      }
-    }
-  }
-  @media only screen and (max-width: 1024px) {
-    .InfoView {
-      width: 50vw;
-      height: 100%;
-    }
-    ::v-deep .hooper {
-      height: 15vh;
-    }
-    .infoView-contents {
-      .hooper-slide {
-        .slide-image {
-          width: 18vw;
-        }
-      }
-    }
-  }
-  @media screen and (max-width: 559px) {
-    .InfoView {
-      width: 70vw;
-      height: 100%;
-    }
-    .infoView-contents {
-      margin: 1em 1em 0;
-      .number {
-        font-size: 0.875em;
-      }
-      .title {
-        font-size: 1.25em;
-        padding-bottom: 0.5em;
-        line-height: 1.5em;
-        margin: 0;
-      }
-      .image {
-        width: 100%;
-      }
-      .right-btn {
-        position: absolute;
-        right: 20px;
-        top: 41%;
-        font-size: 50px;
-        font-weight: bold;
-        color: #fff;
-      }
-      .left-btn {
-        position: absolute;
-        left: 20px;
-        top: 41%;
-        font-size: 25px;
-        font-size: 50px;
-        font-weight: bold;
-        color: #fff;
-      }
-
-      .slider {
-        margin-top: 0;
-        .hooper {
-          height: 15vh;
-        }
-      }
-      .hooper-slide {
-        padding: 0 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .slide-image {
-          height: 100%;
-          width: 40vw;
-        }
-      }
-      .slide-button {
-        display: flex;
-        justify-content: flex-end;
-        padding: 0 0.5em 0.5em;
-        .slide-prev-button {
-          margin-right: 1.2em;
-        }
-      }
-    }
-    ::v-deep .hooper {
-      height: 15vh;
-    }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+    transform: scale(1.3);
+    filter: blur(10px);
   }
 </style>

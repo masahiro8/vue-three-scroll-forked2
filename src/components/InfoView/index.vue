@@ -182,4 +182,88 @@
       }
     }
   }
+
+  @media only screen and (max-width: 1024px) {
+    .InfoView {
+      width: 50vw;
+      height: 100%;
+    }
+    ::v-deep .hooper {
+      height: 15vh;
+    }
+    .infoView-contents {
+      .hooper-slide {
+        .slide-image {
+          width: 18vw;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 559px) {
+    .InfoView {
+      width: 70vw;
+      height: 100%;
+    }
+    .infoView-contents {
+      margin: 1em 1em 0;
+      .number {
+        font-size: 0.875em;
+      }
+      .title {
+        font-size: 1.25em;
+        padding-bottom: 0.5em;
+        line-height: 1.5em;
+        margin: 0;
+      }
+      .image {
+        width: 100%;
+      }
+      .right-btn {
+        position: absolute;
+        right: 20px;
+        top: 41%;
+        font-size: 50px;
+        font-weight: bold;
+        color: #fff;
+      }
+      .left-btn {
+        position: absolute;
+        left: 20px;
+        top: 41%;
+        font-size: 25px;
+        font-size: 50px;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .slider {
+        margin-top: 0;
+        .hooper {
+          height: 15vh;
+        }
+      }
+      .hooper-slide {
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slide-image {
+          height: 100%;
+          width: 40vw;
+        }
+      }
+      .slide-button {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 0.5em 0.5em;
+        .slide-prev-button {
+          margin-right: 1.2em;
+        }
+      }
+    }
+    ::v-deep .hooper {
+      height: 15vh;
+    }
+  }
 </style>
