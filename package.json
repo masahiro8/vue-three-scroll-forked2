@@ -13,7 +13,8 @@
     "sass": "^1.45.0",
     "three": "^0.135.0",
     "three-orbit-controls": "^82.1.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-carousel": "^0.18.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

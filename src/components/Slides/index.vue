@@ -1,0 +1,120 @@
+<template>
+  <div class="Carousel" :class="getImageClass">
+    <div class="Carousel__body">
+      <Hooper ref="carousel" @slide="updateCarousel" :settings="setting">
+        <Slide v-for="image in images" :key="image.id">
+          <div @click="$emit('onClickContent', image)" class="Carousel__image">
+            <img class="slide-image" :src="`./images/${image[srcKeyName]}`" />
+          </div>
+        </Slide>
+      </Hooper>
+    </div>
+    <div class="Carousel__navi">
+      <a class="Carousel__btn" @click.prevent="slidePrev"
+        ><svg
+          width="43"
+          height="43"
+          viewBox="0 0 43 43"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="21.5" cy="21.5" r="21" stroke="#786B58" />
+          <path d="m15 18-5 5h23" stroke="#786B58" /></svg
+      ></a>
+      <a class="Carousel__btn" @click.prevent="slideNext"
+        ><svg
+          width="43"
+          height="43"
+          viewBox="0 0 43 43"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="21.5" cy="21.5" r="21" stroke="#786B58" />
+          <path d="m28 18 5 5H10" stroke="#786B58" /></svg
+      ></a>
+    </div>
+  </div>
+</template>
+
+<script>
+  import { Hooper, Slide } from "hooper";
+  import "hooper/dist/hooper.css";
+
+  export const SLIDER_TYPE = {
+    ARTICLE: "article",
+    POPUP: "popup",
+  };
+
+  export default {
+    data() {
+      return {
+        carouselData: 0,
+      };
+    },
+    props: {
+      images: {
+        type: Array,
+        defaultValue: [],
+      },
+      srcKeyName: {
+        type: String,
+        defaultValue: "src",
+      },
+      type: {
+        type: String,
+        defaultValue: SLIDER_TYPE.ARTICLE,
+      },
+      setting: {
+        type: Object,
+      },
+    },
+    components: {
+      Hooper,
+      Slide,
+    },
+    watch: {
+      carouselData() {
+        this.$refs.carousel.slideTo(this.carouselData);
+      },
+    },
+    computed: {
+      getImageClass() {
+        return this.type === SLIDER_TYPE.ARTICLE ? "article" : "popup";
+      },
+    },
+    methods: {
+      slidePrev() {
+        this.$refs.carousel.slidePrev();
+      },
+      slideNext() {
+        this.$refs.carousel.slideNext();
+      },
+      updateCarousel(payload) {
+        this.myCarouselData = payload.currentSlide;
+      },
+    },
+  };
+</script>
+<style lang="scss" scoped>
+  @import "./slider.scss";
+  .Carousel {
+    &.popup {
+      .hooper {
+        height: 140px !important;
+      }
+      .Carousel__image {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &.article {
+      .hooper {
+        height: 200px !important;
+      }
+      .Carousel__image {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  }
+</style>
