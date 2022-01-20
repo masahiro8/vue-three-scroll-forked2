@@ -35,7 +35,7 @@
 </template>
 
 <script>
-  import ThreeScene from "../components/ThreeScene/index.vue";
+  import ThreeScene from "../components/ThreeScene/indexAnimate.vue";
   import ScrollNavi, { SECTIONS } from "../components/ScrollNavi/index";
   import Modal from "../components/Modal/index.vue";
   import Top from "./Top.vue";

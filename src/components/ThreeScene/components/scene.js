@@ -2,24 +2,32 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 // eslint-disable-next-line
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+import { rotationToRadian } from "../../../util/rotationToRadian";
 
 // import modelDataUrl from "../../data_2.0.0.glb";
 
 export const Scene = () => {
   let scene;
+
+  // Orbitカメラ
   let camera;
+
+  // スプラインカメラ
   let splineCamera;
   let cameraHelper;
 
+  // 注視点
   let targetObject;
 
   let moveProgress = 0;
 
-  let hemiLight;
   let renderer;
   let orbitControls;
 
   let lookAtObjects = [];
+
+  // OrbitControl使用フラグ
+  let isOrbit = false;
 
   const CameraAnim = {
     parent: null,
@@ -47,9 +55,16 @@ export const Scene = () => {
    * @description シーンの初期化
    * @param {int,int,int}
    */
-  const init = ({ canvasId, width, height }) => {
+  const init = ({
+    canvasId,
+    width,
+    height,
+    cameraPosition,
+    targetPosition,
+  }) => {
     scene = new THREE.Scene();
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    renderer.gammaOutput = true;
     renderer.setClearColor(0xffff00, 1);
     renderer.setSize(width, height);
     renderer.setPixelRatio(
@@ -58,17 +73,27 @@ export const Scene = () => {
     document.getElementById(canvasId).appendChild(renderer.domElement);
 
     //カメラ
-    camera = new THREE.PerspectiveCamera(83, width / height, 0.1, 1000);
-    camera.position.set(50, 50, 100);
-    camera.up.set(0, 0, 1);
-    camera.lookAt({ x: 0, y: 0, z: 0 });
+    camera = new THREE.PerspectiveCamera(84, width / height, 0.01, 1000);
+    camera.position.set(cameraPosition.x, cameraPosition.y, cameraPosition.z);
+    camera.lookAt({
+      x: targetPosition.x,
+      y: targetPosition.y,
+      z: targetPosition.z,
+    });
+    camera.up.set(0, 1, 0);
+    camera.up = new THREE.Vector3(0, 1, 0);
+    scene.add(camera);
 
     //アニメーションカメラ
     CameraAnim.parent = new THREE.Object3D();
     scene.add(CameraAnim.parent);
 
     splineCamera = new THREE.PerspectiveCamera(84, width / height, 0.01, 1000);
-    splineCamera.lookAt({ x: 0, y: 0, z: 0 });
+    splineCamera.lookAt({
+      x: targetPosition.x,
+      y: targetPosition.y,
+      z: targetPosition.z,
+    });
     CameraAnim.parent.add(splineCamera);
     cameraHelper = new THREE.CameraHelper(splineCamera);
     scene.add(cameraHelper);
@@ -86,11 +111,9 @@ export const Scene = () => {
     lookAtObjects.push(targetObject);
 
     //ライト
-    hemiLight = new THREE.HemisphereLight(0xffffff, 0xffffff, 1);
-    scene.add(hemiLight);
-    hemiLight.color.setHSL(0.6, 1, 0.6);
-    hemiLight.groundColor.setHSL(0.095, 1, 0.75);
-    hemiLight.position.set(0, 500, 0);
+    const light = new THREE.AmbientLight(0xffffff, 1.0);
+    scene.background = new THREE.Color(0x202020);
+    scene.add(light);
 
     const axis = new THREE.AxesHelper(200);
     scene.add(axis);
@@ -126,9 +149,11 @@ export const Scene = () => {
       .multiplyScalar(pickt - pick)
       .add(anim.tubeGeometry.binormals[pick]);
     anim.tubeGeometry.parameters.path.getTangentAt(t, anim.direction);
-    const offset = 0;
+    // const offset = 0;
+    // CameraAnim.normal.copy(anim.binormal).cross(new THREE.Vector3(0, 1, 0));
     CameraAnim.normal.copy(anim.binormal).cross(anim.direction);
-    anim.position.add(anim.normal.clone().multiplyScalar(offset));
+    // CameraAnim.normal.copy(anim.binormal);
+    // anim.position.add(anim.normal.clone().multiplyScalar(offset));
     target.position.copy(anim.position);
     anim.tubeGeometry.parameters.path.getPointAt(
       (t + 30 / anim.tubeGeometry.parameters.path.getLength()) % 1,
@@ -140,10 +165,6 @@ export const Scene = () => {
    * @description レンダリング
    */
   const render = () => {
-    // const time = Date.now();
-    // const looptime = 20 * 1000;
-    // const t = (time % looptime) / looptime;
-
     const t = moveProgress;
 
     //パスの座標を取り出す
@@ -154,7 +175,7 @@ export const Scene = () => {
       // 注視オブジェクト
       const lookatPosition = lookAtObjects[0].position;
 
-      CameraAnim.lookAt.multiplyScalar(2);
+      // CameraAnim.lookAt.multiplyScalar(2);
       CameraAnim.lookAt.copy(lookatPosition).add(CameraAnim.direction);
 
       splineCamera.matrix.lookAt(
@@ -177,9 +198,13 @@ export const Scene = () => {
       );
       targetObject.quaternion.setFromRotationMatrix(targetObject.matrix);
     }
+    // splineCamera.up.set(0, 0, 1);
 
-    renderer.render(scene, splineCamera);
-    // renderer.render(scene, camera);
+    if (isOrbit) {
+      renderer.render(scene, camera);
+    } else {
+      renderer.render(scene, splineCamera);
+    }
   };
 
   const animate = () => {
@@ -189,6 +214,7 @@ export const Scene = () => {
 
   // OrbitControl 未使用
   const setOrbitCont = () => {
+    isOrbit = true;
     orbitControls = new OrbitControls(camera, renderer.domElement);
     orbitControls.enableDamping = true; // 視点操作のイージングをONにする
     orbitControls.dampingFactor = 0.2; // 視点操作のイージングの値
@@ -201,17 +227,15 @@ export const Scene = () => {
 
   //GLTFの追加
   const addGLTF = (url) => {
-    console.log("gltf");
     const gltfLoader = new GLTFLoader();
-  gltfLoader.load(url, function (data) {
-    const gltf = data;
-    console.log(gltf);
-    const object = gltf.scene;
-    scene.add(object);
-  });
-  }
-  
-
+    gltfLoader.load(url, function (data) {
+      const gltf = data;
+      const object = gltf.scene;
+      object.position.set(0, 0, 0);
+      object.rotation.set(rotationToRadian(0), 0, 0);
+      scene.add(object);
+    });
+  };
 
   //シーンのObject追加
   const addObject = ({ radius, segments, position }) => {
@@ -241,7 +265,7 @@ export const Scene = () => {
       return new THREE.Vector3(point.x, point.y, point.z);
     });
 
-    CameraAnim.curve = new THREE.CatmullRomCurve3(vecPositions, true); // 閉じるフラグ
+    CameraAnim.curve = new THREE.CatmullRomCurve3(vecPositions, false); // 閉じるフラグ
 
     const points = CameraAnim.curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
@@ -260,7 +284,7 @@ export const Scene = () => {
       100,
       2,
       1,
-      true
+      false //カーブを閉じない
     );
     const mesh = new THREE.Mesh(CameraAnim.tubeGeometry, material);
     CameraAnim.parent.add(mesh);
@@ -272,7 +296,7 @@ export const Scene = () => {
       return new THREE.Vector3(point.x, point.y, point.z);
     });
 
-    TargetAnim.curve = new THREE.CatmullRomCurve3(vecPositions, true); // 閉じるフラグ
+    TargetAnim.curve = new THREE.CatmullRomCurve3(vecPositions, false); // 閉じるフラグ
 
     const points = TargetAnim.curve.getPoints(50);
     const geometry = new THREE.BufferGeometry().setFromPoints(points);
@@ -291,7 +315,7 @@ export const Scene = () => {
       100,
       2,
       1,
-      true
+      false //カーブを閉じない
     );
     const mesh = new THREE.Mesh(TargetAnim.tubeGeometry, material);
     TargetAnim.parent.add(mesh);
