@@ -90,6 +90,7 @@ export const Scene = () => {
       if (cameraClip) {
         duration = cameraClip.duration;
       }
+      console.log("duration", duration);
     }
 
     animate();

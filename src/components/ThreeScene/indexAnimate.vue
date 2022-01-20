@@ -22,21 +22,23 @@
 
   // イベント
   export const callbackEvents = [
-    { id: 1, start: 0.07, length: 0.1 },
-    // { id: 2, start: 0.15, length: 0.1 },
-    // { id: 3, start: 0.23, length: 0.1 },
-    // { id: 4, start: 0.3, length: 0.1 },
-    // { id: 5, start: 0.37, length: 0.1 },
-    // { id: 6, start: 0.44, length: 0.1 },
-    // { id: 7, start: 0.51, length: 0.1 },
-    // { id: 8, start: 0.58, length: 0.1 },
-    // { id: 9, start: 0.65, length: 0.1 },
-    // { id: 10, start: 0.72, length: 0.1 },
-    // { id: 11, start: 0.79, length: 0.1 },
-    // { id: 12, start: 0.86, length: 0.1 },
+    { id: 1, start: 0.025, length: 0.01 }, //2.田んぼ
+    { id: 2, start: 0.045, length: 0.01 }, //1.発電機
+    { id: 3, start: 0.105, length: 0.01 }, //5.電球
+    { id: 4, start: 0.153, length: 0.01 }, //4.女性たちの部屋、炊事場
+    { id: 5, start: 0.219, length: 0.01 }, //3.トロッコレール
+    { id: 6, start: 0.348, length: 0.01 }, //6. 水が噴出
+    { id: 7, start: 0.468, length: 0.01 }, //7. 参謀室辺りの第１坑道
+    { id: 8, start: 0.471, length: 0.01 }, //8. 第１坑道の参謀室
+    { id: 9, start: 0.481, length: 0.01 }, //9. 作戦室
+    { id: 10, start: 0.547, length: 0.01 }, //16. 第２４師団司令部
+    { id: 11, start: 0.589, length: 0.01 }, //15. 第１坑道の爆破部
+    { id: 12, start: 0.727, length: 0.01 }, //10. アカギの木
+    { id: 13, start: 0.911, length: 0.01 }, //14. 第２坑道と第３坑道の結節点
+    { id: 14, start: 0.92, length: 0.01 }, //12. 司令官室
   ];
 
-  const modelUrl = "/data/sampleAnim.glb";
+  const modelUrl = "/data/data.glb";
 
   export default {
     name: "ThreeScene",
@@ -120,7 +122,7 @@
     height: 100%;
     /* border: 10px solid red; */
     box-sizing: border-box;
-    transform: scaleY(-1) scaleX(-1);
+    /* transform: scaleY(-1) scaleX(-1); */
   }
 
   .wrapper {
