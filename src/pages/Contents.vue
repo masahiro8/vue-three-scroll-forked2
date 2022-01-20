@@ -21,10 +21,9 @@
         <div class="slider-wrapper">
           <div class="slider">
             <Slider
-              @onClickContent="onClickContent"
               :type="SLIDER_TYPE.ARTICLE"
               :images="content.images"
-              srcKeyName="src"
+              srcKeyName="src_url"
               :setting="SETTING"
             />
           </div>
@@ -59,11 +58,6 @@
           },
         },
       };
-    },
-    methods: {
-      onClickContent(image) {
-        console.log("onClickContent", image);
-      },
     },
   };
 </script>

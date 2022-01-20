@@ -9,22 +9,22 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_1.jpg",
+            src_url: "body-image_1.jpg",
             caption: "",
           },
           {
             id: 2,
-            src: "body-image_2.jpg",
+            src_url: "body-image_2.jpg",
             caption: "",
           },
           {
             id: 3,
-            src: "body-image_3.jpg",
+            src_url: "body-image_3.jpg",
             caption: "",
           },
           {
             id: 4,
-            src: "body-graphic_1.png",
+            src_url: "body-graphic_1.png",
             caption: "",
           },
         ],
@@ -35,22 +35,22 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_4.jpg",
+            src_url: "body-image_4.jpg",
             caption: "",
           },
           {
             id: 2,
-            src: "body-image_5.jpg",
+            src_url: "body-image_5.jpg",
             caption: "",
           },
           {
             id: 3,
-            src: "body-image_6.jpg",
+            src_url: "body-image_6.jpg",
             caption: "",
           },
           {
             id: 4,
-            src: "body-graphic_2.png",
+            src_url: "body-graphic_2.png",
             caption: "",
           },
         ],
@@ -67,7 +67,7 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-graphic_3.png",
+            src_url: "body-graphic_3.png",
             caption: "",
           },
         ],
@@ -78,17 +78,17 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_7.png",
+            src_url: "body-image_7.png",
             caption: "",
           },
           {
             id: 2,
-            src: "body-image_8.jpg",
+            src_url: "body-image_8.jpg",
             caption: "",
           },
           {
             id: 3,
-            src: "body-image_9.jpg",
+            src_url: "body-image_9.jpg",
             caption: "",
           },
         ],
@@ -99,7 +99,7 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-graphic_4.png",
+            src_url: "body-graphic_4.png",
             caption: "",
           },
         ],
@@ -116,12 +116,12 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_10.jpg",
+            src_url: "body-image_10.jpg",
             caption: "",
           },
           {
             id: 2,
-            src: "body-image_11.jpg",
+            src_url: "body-image_11.jpg",
             caption: "",
           },
         ],
@@ -132,7 +132,7 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-graphic_4.png",
+            src_url: "body-graphic_4.png",
             caption: "",
           },
         ],
@@ -143,7 +143,7 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_12.jpg",
+            src_url: "body-image_12.jpg",
             caption: "",
           },
         ],
@@ -154,12 +154,12 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_13.jpg",
+            src_url: "body-image_13.jpg",
             caption: "",
           },
           {
             id: 2,
-            src: "body-image_14.jpg",
+            src_url: "body-image_14.jpg",
             caption: "",
           },
         ],
@@ -176,17 +176,17 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_15.jpg",
+            src_url: "body-image_15.jpg",
             caption: "",
           },
           {
             id: 2,
-            src: "body-image_16.jpg",
+            src_url: "body-image_16.jpg",
             caption: "",
           },
           {
             id: 3,
-            src: "body-graphic_5.png",
+            src_url: "body-graphic_5.png",
             caption: "",
           },
         ],
@@ -197,12 +197,12 @@ export const articles = [
         images: [
           {
             id: 1,
-            src: "body-image_16.jpg",
+            src_url: "body-image_16.jpg",
             caption: "",
           },
           {
             id: 2,
-            src: "body-graphic_6.png",
+            src_url: "body-graphic_6.png",
             caption: "",
           },
         ],

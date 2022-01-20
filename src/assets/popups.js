@@ -8,7 +8,7 @@ export const popups = [
         id: 1,
         type: "video",
         thumb_url: "thumb-popup-mv_01.png",
-        video_url:
+        src_url:
           "https://drive.google.com/uc?export=download&id=1wALvMeLCCACcZFESir-7RwUhJ4WYwa0S",
         caption: "",
       },
@@ -24,7 +24,7 @@ export const popups = [
         id: 1,
         type: "video",
         thumb_url: "thumb-popup-mv_02.png",
-        video_url:
+        src_url:
           "https://drive.google.com/uc?export=download&id=1IfSnHIc8dxWVM2r5CmJKEcMYyph4ZS9e",
         caption: "",
       },

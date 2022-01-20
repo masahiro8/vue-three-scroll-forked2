@@ -7,7 +7,6 @@
         {{ text }}
       </p>
       <Slider
-        @onClickContent="onClickContent"
         :type="SLIDER_TYPE.POPUP"
         :images="images"
         srcKeyName="thumb_url"
@@ -26,7 +25,7 @@
           wheelControl: false,
           breakpoints: {
             309: {
-              itemsToShow: 4.1,
+              itemsToShow: 2.1,
             },
           },
         },
@@ -76,9 +75,6 @@
         }
       },
     },
-    methods: {
-      onClickContent() {},
-    },
   };
 </script>
 <style lang="scss" scoped>
@@ -93,7 +89,7 @@
     top: 0;
     transition: all 0.3s ease-out;
     transform: translateX(429px);
-    z-index: 9;
+    z-index: 2;
     overflow: auto;
   }
 

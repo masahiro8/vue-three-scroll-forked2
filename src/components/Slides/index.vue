@@ -3,7 +3,7 @@
     <div class="Carousel__body">
       <Hooper ref="carousel" @slide="updateCarousel" :settings="setting">
         <Slide v-for="image in images" :key="image.id">
-          <div @click="$emit('onClickContent', image)" class="Carousel__image">
+          <div @click="onClickContent(image)" class="Carousel__image">
             <img class="slide-image" :src="`./images/${image[srcKeyName]}`" />
           </div>
         </Slide>
@@ -39,6 +39,7 @@
 <script>
   import { Hooper, Slide } from "hooper";
   import "hooper/dist/hooper.css";
+  import { modal } from "../Modal/index.vue";
 
   export const SLIDER_TYPE = {
     ARTICLE: "article",
@@ -92,6 +93,10 @@
       updateCarousel(payload) {
         this.myCarouselData = payload.currentSlide;
       },
+      onClickContent(image) {
+        console.log("onClickContent");
+        modal.show(image);
+      },
     },
   };
 </script>
@@ -103,17 +108,17 @@
         height: 140px !important;
       }
       .Carousel__image {
-        width: 80px;
-        height: 80px;
+        width: 120px;
+        height: 120px;
       }
     }
     &.article {
       .hooper {
-        height: 200px !important;
+        height: 240px !important;
       }
       .Carousel__image {
-        width: 180px;
-        height: 180px;
+        width: 220px;
+        height: 220px;
       }
     }
   }

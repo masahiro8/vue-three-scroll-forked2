@@ -11,4 +11,10 @@ export const ASSETS = {
     url: "./data/data_2.0.0.glb",
     src: null,
   },
+  INTERVIEW_1: {
+    key: "INTERVIEW_1",
+    type: "mp4",
+    url: "./data/movie-01.mp4",
+    src: null,
+  },
 };

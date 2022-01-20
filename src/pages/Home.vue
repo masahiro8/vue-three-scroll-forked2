@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <Modal />
     <transition name="fade">
       <Loading v-if="!isLoaded" />
     </transition>
@@ -19,11 +20,15 @@
         v-if="isLoaded"
         :src="getGLTFModel"
         :callInfoEvent="callInfoEvent"
+        :class="isShowModal ? 'isModal' : ''"
       />
-      <Modal :val="postItem" v-show="showContent" @close="closeModal" />
-      <InfoView :isShowInfo="isShowInfo" :selectedItem="selectedItem" />
+      <InfoView
+        :isShowInfo="isShowInfo"
+        :selectedItem="selectedItem"
+        :class="isShowModal ? 'isModal' : ''"
+      />
       <ScrollNavi />
-      <Contents :items="articles" />
+      <Contents :items="articles" :class="isShowModal ? 'isModal' : ''" />
       <Footer />
     </div>
   </div>
@@ -43,6 +48,7 @@
   import { articles } from "../assets/articles";
   import { ASSETS } from "../assets/assets";
   import { loader } from "../util/loader";
+  import { modal } from "../components/Modal/index.vue";
 
   const OBJECT_INFO = popups;
 
@@ -57,6 +63,7 @@
         articles,
         item: [],
         isShowInfo: false,
+        isShowModal: false,
         OBJECT_INFO,
         selectedId: null,
         showContent: false,
@@ -80,6 +87,9 @@
     },
     async mounted() {
       this.onLoadAssets();
+      modal.setCallback((result) => {
+        this.isShowModal = result;
+      });
     },
     components: {
       ThreeScene,
@@ -118,6 +128,7 @@
         const _ASSETS = await loader().getFiles([
           ASSETS.HEAD_MOVIE,
           ASSETS.GLTF_MODEL,
+          ASSETS.INTERVIEW_1,
         ]);
 
         this.ASSETS = {
@@ -194,6 +205,10 @@
         padding: 0;
       }
     }
+  }
+
+  .isModal {
+    filter: blur(10px);
   }
 
   .fade-enter-active,
