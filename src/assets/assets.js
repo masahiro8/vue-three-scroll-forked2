@@ -8,7 +8,7 @@ export const ASSETS = {
   GLTF_MODEL: {
     key: "GLTF_MODEL",
     type: "glb",
-    url: "./data/data_2.0.0.glb",
+    url: "./data/data.glb",
     src: null,
   },
   INTERVIEW_1: {
