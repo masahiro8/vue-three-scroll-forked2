@@ -25,12 +25,14 @@
         <div class="slider">
           <hooper :settings="hooperSettings" ref="carousel">
             <slide
-              v-for="item in selectedItem.images"
+              v-for="item in selectedItem && selectedItem.images"
               :key="item.id"
-              :index="indx"
             >
-              <div>
-                <img class="slide-image" :src="image.thumb_url" />
+              <div class="slide-content-wrapper">
+                <img class="slide-image" :src="'./images/' + item.thumb_url" />
+                <p class="slide-caption">
+                  {{ item.caption }}
+                </p>
               </div>
             </slide>
           </hooper>
@@ -187,15 +189,13 @@ const OBJECT_INFO = [
       "３月２９日夜を限りとして、陽光を見ない洞窟生活が始まった。野戦築城隊が、昼夜兼行の努力をして、首里高地北側諸坑道と、南側諸坑道との開通に成功。地下３０㍍、延長千数百㍍の大洞窟、多数の事務室や居室、かつての銀座の夜店もかくやと想う。二六時中煌々たる無数の電灯、千余人の将兵を収容して、さながら一大地下ホテルの観がある。",
     text_3:
       "\n狭くて、奥深い坑道内には、人間が充満しているから、空気の流通が悪く、酸素が稀薄だ。（略）湿度は百パーセントに近い。身体は気だるく、心気は朦朧となる。将兵の活力をそぐこと甚だしく、到底長く人間の住める場所ではない。それをしも耐え得ているのは、戦いの緊張のおかげだ。３２軍の高級参謀だった八原博道著「沖縄決戦」から\n",
-    images: [
-      {
-        id: 1,
-        type: "image",
-        thumb_url: "thumb-popup-image_03.png",
-        src_url: "popup-image_03.jpg",
-        caption: "那覇市歴史博物館提供",
-      },
-    ],
+    images: {
+      id: 1,
+      type: "image",
+      thumb_url: "thumb-popup-image_03.png",
+      src_url: "popup-image_03.jpg",
+      caption: "那覇市歴史博物館提供",
+    },
   },
   {
     id: 8,
@@ -396,10 +396,10 @@ export default {
             itemsToShow: 1.5,
           },
           800: {
-            itemsToShow: 1.5,
+            itemsToShow: 2,
           },
           1200: {
-            itemsToShow: 2.1,
+            itemsToShow: 2,
           },
         },
       },
@@ -427,6 +427,9 @@ export default {
       });
       return result;
     },
+    // shouldShowSlide(){
+    //   this.shouldShowSlide = !this.shouldShowSlide
+    // }
   },
   // created() {
   //   this.fetchData();
@@ -571,17 +574,23 @@ export default {
   .slider {
     margin-top: 32px;
     .hooper {
-      height: 15vh;
+      height: 26vh;
     }
   }
+  .hooper-track {
+    height: 0;
+  }
   .hooper-slide {
-    padding: 10px;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .slide-caption {
       font-size: 10px;
+    }
+    .slide-content-wrapper {
+      text-align: center;
     }
 
     .slide-image {
