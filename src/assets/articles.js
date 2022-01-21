@@ -132,7 +132,7 @@ export const articles = [
         images: [
           {
             id: 1,
-            src_url: "body-graphic_4.png",
+            src_url: "body-graphic_5.png",
             caption: "",
           },
         ],
@@ -186,7 +186,7 @@ export const articles = [
           },
           {
             id: 3,
-            src_url: "body-graphic_5.png",
+            src_url: "body-graphic_6.png",
             caption: "",
           },
         ],
@@ -202,7 +202,7 @@ export const articles = [
           },
           {
             id: 2,
-            src_url: "body-graphic_6.png",
+            src_url: "body-graphic_7.png",
             caption: "",
           },
         ],
