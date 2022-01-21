@@ -145,7 +145,7 @@ export const popups = [
         type: "video",
         thumb_url: "thumb-popup-mv_07.png",
         src_url:
-          "https://drive.google.com/uc?export=download&id=1UuP4_6PBsX8l7FoNcNBGSnn9Sc6Lo2wN",
+          "https://drive.google.com/uc?export=download&id=1s7CBTXN-OaTkPr1PpV52lfFn8Ew9KkH8",
       },
     ],
   },
@@ -222,7 +222,7 @@ export const popups = [
         id: 1,
         type: "image",
         thumb_url: "thumb-popup-image_08.png",
-        src_url: "popup-image_08.jpg",
+        src_url: "popup-image_08.png",
         caption: "第２坑道と第３坑道の交差点",
       },
       {
@@ -243,7 +243,7 @@ export const popups = [
         id: 4,
         type: "image",
         thumb_url: "thumb-popup-image_11.png",
-        src_url: "popup-image_11.jpg",
+        src_url: "popup-image_11.png",
         caption:
           "第2坑道の第32軍司令部作戦室で、日本軍が残した書類を調査する米軍",
       },
