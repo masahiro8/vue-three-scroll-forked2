@@ -1,25 +1,17 @@
 export const loader = () => {
-  const loadImage = (file) => {
-    return new Promise((resolve) => {
-      let img = new Image();
-      img.onload = () => {
-        console.log("image loaded", file.url);
-        resolve({
-          ...file,
-        });
-      };
-      img.src = file.url;
-    });
-  };
-
-  const loadMovie = (file) => {
+  const loadFile = (file, callbackProcess) => {
     return new Promise((resolve) => {
       let xhr = new XMLHttpRequest();
       xhr.open("GET", file.url, true);
       xhr.responseType = "blob";
+      xhr.onprogress = (e) => {
+        const process = (e.loaded / e.total) * 100;
+        callbackProcess(process);
+      };
       xhr.onload = (e) => {
-        var blob = e.srcElement.response;
-        var src = (window.webkitURL || window.URL).createObjectURL(blob);
+        const blob = e.srcElement.response;
+        const src = (window.webkitURL || window.URL).createObjectURL(blob);
+        callbackProcess(100);
         resolve({
           ...file,
           src,
@@ -29,15 +21,28 @@ export const loader = () => {
     });
   };
 
-  const getFiles = async (filesArray) => {
+  const getFiles = async (filesArray, callbackProcess) => {
     console.log("filesArray", filesArray);
+
+    // watch progress
+    const watchLists = {};
+    filesArray.forEach((file) => {
+      watchLists[file.url] = { progress: 0 };
+    });
+
     return await Promise.all(
       filesArray.map(async (file) => {
         if (file.type === "png" || file.type === "jpg") {
-          return await loadImage(file.url);
+          return await loadFile(file.url, (progress) => {
+            watchLists[file.url] = { progress };
+            callbackProcess(watchLists);
+          });
         }
         if (file.type === "mp4" || file.type === "glb") {
-          return await loadMovie(file);
+          return await loadFile(file, (progress) => {
+            watchLists[file.url] = { progress };
+            callbackProcess(watchLists);
+          });
         }
       })
     );

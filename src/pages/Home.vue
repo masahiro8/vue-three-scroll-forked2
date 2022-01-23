@@ -2,7 +2,7 @@
   <div class="main">
     <Modal />
     <transition name="fade">
-      <Loading v-if="!isLoaded" />
+      <Loading v-if="!isLoaded" :progress="loadingProgress" />
     </transition>
     <div class="header">
       <ul class="header-content">
@@ -60,6 +60,7 @@
           HEAD_MOVIE: null,
         },
         isLoaded: false,
+        loadingProgress: 0,
         articles,
         item: [],
         isShowInfo: false,
@@ -125,11 +126,16 @@
        * ローディング
        */
       async onLoadAssets() {
-        const _ASSETS = await loader().getFiles([
-          ASSETS.HEAD_MOVIE,
-          ASSETS.GLTF_MODEL,
-          ASSETS.INTERVIEW_1,
-        ]);
+        const _ASSETS = await loader().getFiles(
+          [ASSETS.HEAD_MOVIE, ASSETS.GLTF_MODEL, ASSETS.INTERVIEW_1],
+          (progress) => {
+            const total = Object.keys(progress).length * 100;
+            const current = Object.keys(progress)
+              .map((key) => progress[key].progress)
+              .reduce((prev, current) => prev + current);
+            this.loadingProgress = (current / total) * 100;
+          }
+        );
 
         this.ASSETS = {
           HEAD_MOVIE: _ASSETS.find((item) => item.key === "HEAD_MOVIE"),
@@ -155,13 +161,12 @@
         this.$refs.carousel.slideNext();
       },
 
-      callInfoEvent({ move, progress, results }) {
+      callInfoEvent({ results }) {
         const f = results.find((item) => {
           return item.isFreeze == true;
         });
         this.isShowInfo = f && "id" in f ? true : false;
 
-        console.log(this.isShowInfo, f, move, progress);
         if (this.isShowInfo == true) {
           this.selectedId = f.id;
         }
