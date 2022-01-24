@@ -1,7 +1,7 @@
 export const articles = [
   {
     id: 1,
-    title: "①３２軍とは",
+    title: "３２軍とは",
     contents: [
       {
         subtitle: "住民参加の防衛態勢",
@@ -168,7 +168,7 @@ export const articles = [
   },
   {
     id: 4,
-    title: "④ 南部撤退の判断はいかに",
+    title: "南部撤退の判断はいかに",
     contents: [
       {
         subtitle: "追い詰められた３２軍",
