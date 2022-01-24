@@ -1,7 +1,7 @@
 export const popups = [
   {
     id: 1,
-    title: "発電機マーク",
+    title: "発電機",
     text_1: "",
     images: [
       {
@@ -10,7 +10,7 @@ export const popups = [
         thumb_url: "thumb-popup-mv_01.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1wALvMeLCCACcZFESir-7RwUhJ4WYwa0S",
-        caption: "",
+        caption: "発電機を冷やす水を運んだ古堅実吉さん",
       },
     ],
   },
@@ -26,7 +26,7 @@ export const popups = [
         thumb_url: "thumb-popup-mv_02.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1IfSnHIc8dxWVM2r5CmJKEcMYyph4ZS9e",
-        caption: "",
+        caption: "発電機を冷やす水を運んだ古堅実吉さん",
       },
     ],
   },
@@ -55,11 +55,11 @@ export const popups = [
   },
   {
     id: 4,
-    title: "女性たちの部屋（もんぺ姿の女性たち）、炊事場",
+    title: "女性たちの部屋、炊事場",
     text_1:
       "もともと地元の南風原で壕掘りに動員されていたが、軍に指示されるまま炊事婦として３２軍壕に来た。「中は兵隊がいっぱいで、女は少ない。本当は怖かったけど、嫌だと言ったら大変。スパイ容疑で捕まるよ」。炊事場ではイモを洗ったり切ったりしていたが、食料は徐々に減っていった。炊事婦だった大城光子さんの証言より\n\n",
     text_2:
-      "「第３２軍司令部壕の中には、女性ばかりの部屋があった。「少なくとも２０人はいた。軍服やモンペを着て、狭い部屋で身を縮めるように座っていた」。鉄血勤皇師範隊に動員された大田昌秀さんは、毎日のようにその前を通った。最初は「なんで女が戦場にいるのか」と、不思議でならなかった。学友たちと「朝鮮ピーだってよ」と言い合ったが、やはり意味は分からないままだった。「沖縄タイムス連載『埋もれた戦　首里城地下３２軍壕』＝２０１２年掲載」から",
+      "第３２軍司令部壕の中には、女性ばかりの部屋があった。「少なくとも２０人はいた。軍服やモンペを着て、狭い部屋で身を縮めるように座っていた」。鉄血勤皇師範隊に動員された大田昌秀さんは、毎日のようにその前を通った。最初は「なんで女が戦場にいるのか」と、不思議でならなかった。学友たちと「朝鮮ピーだってよ」と言い合ったが、やはり意味は分からないままだった。「沖縄タイムス連載『埋もれた戦　首里城地下３２軍壕』＝２０１２年掲載」から",
     images: [
       {
         id: 1,
@@ -74,7 +74,7 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_02.png",
         src_url: "popup-image_02.jpg",
-        caption: "炊事場の写真。米軍が旧日本軍の書類を発見した",
+        caption: "炊事場の写真。米軍が旧日本軍の書類を発見した＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
@@ -88,7 +88,7 @@ export const popups = [
         thumb_url: "thumb-popup-mv_05.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1FAQZulyx3FOI_DYrgVj0y2UXjGnClate",
-        caption: "",
+        caption: "発電機を冷やす水を運んだ古堅実吉さん",
       },
     ],
   },
