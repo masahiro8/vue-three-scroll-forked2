@@ -146,6 +146,7 @@ export const popups = [
         thumb_url: "thumb-popup-mv_07.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1s7CBTXN-OaTkPr1PpV52lfFn8Ew9KkH8",
+        caption:"伝令として壕内に入った宮平盛彦さん",
       },
     ],
   },
@@ -286,7 +287,7 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_15.png",
         src_url: "popup-image_15.jpg",
-        caption: "第32軍情報室と第24師団作戦室",
+        caption: "第32軍情報室と第24師団作戦室＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
         id: 2,
@@ -294,7 +295,7 @@ export const popups = [
         thumb_url: "thumb-popup-image_16.png",
         src_url: "popup-image_16.jpg",
         caption:
-          "米軍は、第32軍情報室と第24師団作戦室でボードの後ろから大量の文書を見つけた",
+          "米軍は、第32軍情報室と第24師団作戦室でボードの後ろから大量の文書を見つけた＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
