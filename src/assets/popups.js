@@ -184,14 +184,14 @@ export const popups = [
         thumb_url: "thumb-popup-image_04.png",
         src_url: "popup-image_04.jpg",
         caption:
-          "牛島司令官の部屋。第2坑道との交差点から第３坑道の西側に向かって撮影",
+          "牛島司令官の部屋。第2坑道との交差点から第３坑道の西側に向かって撮影＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
         id: 2,
         type: "image",
         thumb_url: "thumb-popup-image_05.png",
         src_url: "popup-image_05.jpg",
-        caption: "牛島司令官の部屋",
+        caption: "牛島司令官の部屋＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
