@@ -267,7 +267,7 @@ export const popups = [
         thumb_url: "thumb-popup-image_13.png",
         src_url: "popup-image_13.jpg",
         caption:
-          "大規模な爆破部分で、第1坑道につながるが、米軍も立ち入れなかった区域",
+          "大規模な爆破部分で、第1坑道につながるが、米軍も立ち入れなかった区域＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
         id: 2,
