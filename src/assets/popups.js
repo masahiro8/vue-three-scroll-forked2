@@ -160,6 +160,7 @@ export const popups = [
         thumb_url: "thumb-popup-mv_08.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1UuP4_6PBsX8l7FoNcNBGSnn9Sc6Lo2wN",
+        caption:"発電機を冷やす水を運んだ古堅実吉さん"
       },
     ],
   },
@@ -224,14 +225,14 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_08.png",
         src_url: "popup-image_08.png",
-        caption: "第２坑道と第３坑道の交差点",
+        caption: "第２坑道と第３坑道の交差点＝米公文館所蔵、牛島貞満氏提供",
       },
       {
         id: 2,
         type: "image",
         thumb_url: "thumb-popup-image_09.png",
         src_url: "popup-image_09.jpg",
-        caption: "第２坑道と第３坑道の交差点",
+        caption: "第２坑道と第３坑道の結節点＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
         id: 3,
@@ -246,14 +247,14 @@ export const popups = [
         thumb_url: "thumb-popup-image_11.png",
         src_url: "popup-image_11.png",
         caption:
-          "第2坑道の第32軍司令部作戦室で、日本軍が残した書類を調査する米軍",
+          "第2坑道の第32軍司令部作戦室で、日本軍が残した書類を調査する米軍＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
         id: 5,
         type: "image",
         thumb_url: "thumb-popup-image_12.png",
         src_url: "popup-image_12.jpg",
-        caption: "第32軍作戦室。この奥は第2坑口",
+        caption: "第32軍作戦室。この奥は第2坑口＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
