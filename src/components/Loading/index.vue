@@ -4,12 +4,28 @@
       <div>O K I N A W A</div>
       <div>第 3 2 軍 壕</div>
     </div>
-    <div class="Loading__text">Loading</div>
+
+    <div class="Loading__progress">
+      <div class="progress__bar">
+        <div class="progress__current" :style="`width:${progress}%`"></div>
+      </div>
+      <div class="Loading__text">
+        <span>{{ `${progress.toFixed(2)}%` }}</span>
+      </div>
+    </div>
+
     <div class="Loading__line"></div>
   </div>
 </template>
 <script>
-  export default {};
+  export default {
+    props: {
+      progress: {
+        type: Number,
+        defaultValue: 0,
+      },
+    },
+  };
 </script>
 <style lang="scss" scoped>
   .Loading {
@@ -42,7 +58,13 @@
   .Loading__text {
     color: #666;
     letter-spacing: 2px;
-    font-size: 0.8em;
+    font-size: 0.6em;
+  }
+
+  .Loading__progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .Loading__line {
@@ -52,5 +74,21 @@
     position: absolute;
     left: 50%;
     bottom: 0;
+  }
+
+  .progress__bar {
+    width: 100px;
+    height: 2px;
+    background-color: #444;
+    position: relative;
+    margin: 8px 0;
+
+    .progress__current {
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #aaa;
+    }
   }
 </style>
