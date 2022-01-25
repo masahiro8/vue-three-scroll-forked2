@@ -18,7 +18,7 @@
           </div>
         </div>
         <!-- 画像 -->
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" v-if="isImages(content)">
           <div class="slider">
             <Slider
               :type="SLIDER_TYPE.ARTICLE"
@@ -59,6 +59,11 @@ export default {
       },
     };
   },
+  methods: {
+    isImages(content) {
+      return "images" in content && content.images.length;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -88,8 +93,12 @@ h2 {
   overflow-wrap: break-word;
   margin-left: auto;
   font-size: 1em;
-  line-height: 1.625em;
-  letter-spacing: 0.1875em;
+  line-height: 1.8em;
+  letter-spacing: 0.18em;
+  width: 70%;
+  p {
+    white-space: pre-line;
+  }
 }
 
 /**

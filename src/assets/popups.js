@@ -2,7 +2,7 @@ export const popups = [
   {
     id: 1,
     title: "発電機",
-    text_1: "",
+    text_1: "発電機を冷やす水を運んだ古堅実吉さん",
     images: [
       {
         id: 1,
@@ -81,6 +81,7 @@ export const popups = [
   {
     id: 5,
     title: "電灯、電球",
+    text_1:"発電機を冷やす水を運んだ古堅実吉さん",
     images: [
       {
         id: 1,
@@ -153,6 +154,7 @@ export const popups = [
   {
     id: 10,
     title: "アカギの木",
+    text_1:"発電機を冷やす水を運んだ古堅実吉さん",
     images: [
       {
         id: 1,
