@@ -3,9 +3,7 @@
     <div class="content-section" v-for="item in items" :key="item.id">
       <!-- タイトル -->
       <div v-if="item.contents.length > 0">
-        <div>
-          <h2>{{ item.title }}</h2>
-        </div>
+        <h2>{{ item.title }}</h2>
       </div>
       <!-- コンテンツ -->
       <div v-for="content in item.contents" :key="content.subtitle">
@@ -50,7 +48,7 @@ export default {
       SETTING: {
         wheelControl: false,
         // infiniteScroll: true,
-        // itemsToShow: 2.1,
+        itemsToShow: 2.1,
         breakpoints: {
           600: {
             itemsToShow: 4.1,
@@ -74,6 +72,7 @@ export default {
 
 .content-section {
   padding: 8em 0 0 0;
+  border-bottom: 1px solid rgba(120, 107, 88, 0.3);
 }
 .content-wrapper {
   padding: 2em 4em;
@@ -120,14 +119,22 @@ h2 {
   .contents {
     padding: 0;
   }
+  .content-section {
+    padding: 6em 0 2em 0;
+  }
+  h2 {
+    padding: 0 16px;
+    letter-spacing: 0.3em;
+    font-size: 30px;
+  }
   .content-wrapper {
     padding: 1.25em;
-    h2 {
-      padding: 0;
-    }
   }
   .content-text {
     inline-size: auto;
+  }
+  .slider {
+    margin-top: 2em;
   }
 }
 </style>

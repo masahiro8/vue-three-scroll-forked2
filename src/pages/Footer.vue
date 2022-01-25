@@ -3,11 +3,11 @@
     <div class="fotter-contents">
       <div class="footer-text">
         <h2>第2章への案内</h2>
-        <p>
+        <p class="intro">
           南部撤退を決めた３２軍。２月上旬公開の第2章では、米軍の猛攻撃が続く中、どうやって衰退したのか南部撤退のルートを沖縄県平和祈念資料館友の会事務局長の仲村真さんとたどります。海岸まで追い込まれた３２軍の組織的戦闘は、どう終焉を迎えたのかを伝える。
         </p>
       </div>
-      <div class="footer-text">
+      <div class="footer-refer">
         <h2>参考・引用文献（５０音順）</h2>
         <p>・朝日新聞社編「知る沖縄戦」（2021年、朝日新聞社）</p>
         <p>
@@ -64,7 +64,7 @@
           />
         </div>
       </div>
-      <div class="footer-text">
+      <div class="footer-credit">
         <h2>クレジット</h2>
         <p>・取材&emsp;山中由睦（沖縄タイムス）、大城志織（沖縄タイムス）</p>
         <p>・撮影&emsp;下地広也（沖縄タイムス）</p>
@@ -156,10 +156,31 @@
 }
 @media screen and (max-width: 559px) {
   .fotter-contents {
-    padding: 6.25em 0;
+    padding: 0 15px;
     color: #ffffff;
     position: relative;
     z-index: 1;
+    .footer-text {
+      padding-top: 5em;
+      width: 100%;
+      h2 {
+        padding-bottom: 0;
+        letter-spacing: 0.05em;
+      }
+      .intro {
+        line-height: 2.25em;
+        letter-spacing: 0.28em;
+      }
+      p {
+        margin-right: -0.5em;
+        font-size: 18px;
+        padding: 5px 0;
+      }
+    }
+    .footer-ads {
+      margin: 8em 0 0;
+      padding: 0;
+    }
     .subtitle {
       font-size: 1.2em;
       letter-spacing: 0.4em;
@@ -176,6 +197,34 @@
     }
     .box {
       width: 18.75em;
+    }
+    .footer-refer {
+      margin: 8em 0 0;
+      padding: 0;
+      h2 {
+        font-weight: normal;
+        font-size: 20px;
+      }
+      p {
+        text-align: left;
+        margin: 0 -0.5em 0 0;
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
+    }
+    .footer-credit {
+      margin: 10em 0 0;
+      padding: 0 0 8em;
+      h2 {
+        font-weight: normal;
+        font-size: 20px;
+      }
+      p {
+        text-align: left;
+        margin: 0 -0.5em 0 0;
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
     }
   }
 }
