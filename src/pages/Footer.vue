@@ -113,11 +113,49 @@
     padding-top: 6.5em;
     h2 {
       font-weight: normal;
-      padding-bottom: 1.875em;
-      letter-spacing: 0.1em;
+      line-height: 2.25em;
+      letter-spacing: 0.435em;
     }
     p {
       font-size: 18px;
+      letter-spacing: 0.1em;
+      margin: 0;
+      text-align: left;
+    }
+  }
+  .intro {
+    line-height: 2.25em;
+    letter-spacing: 0.435em;
+  }
+  .footer-refer {
+    padding-top: 6.5em;
+    width: 64em;
+    margin: auto;
+    h2 {
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      margin-bottom: 3em;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      margin: 0;
+      text-align: left;
+    }
+  }
+  .footer-credit {
+    padding-top: 8.75em;
+    width: 64em;
+    margin: auto;
+    h2 {
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      margin-bottom: 3em;
+    }
+    p {
+      font-size: 14px;
       letter-spacing: 0.1em;
       margin: 0;
       text-align: left;

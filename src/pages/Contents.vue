@@ -71,17 +71,18 @@ export default {
 }
 
 .content-section {
-  padding: 8em 0 0 0;
+  padding: 8em 0;
   border-bottom: 1px solid rgba(120, 107, 88, 0.3);
+  h2 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: normal;
+    letter-spacing: 0.5em;
+    padding-left: 3em;
+  }
 }
 .content-wrapper {
   padding: 2em 4em;
-}
-h2 {
-  margin: 0;
-  font-size: 2.5em;
-  font-weight: normal;
-  letter-spacing: 0.5em;
 }
 
 .content-subtitle {
