@@ -3,7 +3,7 @@
     <div class="content-section" v-for="item in items" :key="item.id">
       <!-- タイトル -->
       <div v-if="item.contents.length > 0">
-        <div class="content-wrapper">
+        <div>
           <h2>{{ item.title }}</h2>
         </div>
       </div>
@@ -108,5 +108,17 @@ h2 {
 }
 
 @media screen and (max-width: 559px) {
+  .contents {
+    padding: 0;
+  }
+  .content-wrapper {
+    padding: 1.25em;
+    h2 {
+      padding: 0;
+    }
+  }
+  .content-text {
+    inline-size: auto;
+  }
 }
 </style>

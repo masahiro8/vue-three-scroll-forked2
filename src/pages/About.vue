@@ -44,10 +44,18 @@
   }
 }
 @media screen and (max-width: 559px) {
-  .fotter-contents {
-    padding: 6.25em 0;
+  .about-contents {
+    padding: 48px 15px 15px;
     position: relative;
     z-index: 1;
+    p {
+      padding-top: 1.875em;
+      font-size: 18px;
+      margin-right: -0.5em;
+      line-height: 2.25em;
+      letter-spacing: 0.28em;
+      font-weight: 600;
+    }
   }
 }
 </style>
