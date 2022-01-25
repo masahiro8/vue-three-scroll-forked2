@@ -18,7 +18,7 @@
           </div>
         </div>
         <!-- 画像 -->
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" v-if="isImages(content)">
           <div class="slider">
             <Slider
               :type="SLIDER_TYPE.ARTICLE"
@@ -33,78 +33,89 @@
   </div>
 </template>
 <script>
-  import Slider, { SLIDER_TYPE } from "../components/Slides/index.vue";
+import Slider, { SLIDER_TYPE } from "../components/Slides/index.vue";
 
-  export default {
-    components: {
-      Slider,
+export default {
+  components: {
+    Slider,
+  },
+  props: {
+    items: {
+      type: Array,
     },
-    props: {
-      items: {
-        type: Array,
-      },
-    },
-    data: () => {
-      return {
-        SLIDER_TYPE,
-        SETTING: {
-          wheelControl: false,
-          // infiniteScroll: true,
-          // itemsToShow: 2.1,
-          breakpoints: {
-            600: {
-              itemsToShow: 4.1,
-            },
+  },
+  data: () => {
+    return {
+      SLIDER_TYPE,
+      SETTING: {
+        wheelControl: false,
+        // infiniteScroll: true,
+        // itemsToShow: 2.1,
+        breakpoints: {
+          600: {
+            itemsToShow: 4.1,
           },
         },
-      };
+      },
+    };
+  },
+  methods: {
+    isImages(content) {
+      return "images" in content && content.images.length;
     },
-  };
+  },
+};
 </script>
 <style lang="scss" scoped>
-  .contents {
-    padding-top: 10.25em;
-    background-image: url("~@/assets/image/background.png");
-  }
+.contents {
+  padding-top: 10.25em;
+  background-image: url("~@/assets/image/background.png");
+}
 
-  .content-section {
-    padding: 8em 0 0 0;
-  }
-  .content-wrapper {
-    padding: 2em 4em;
-  }
-  h2 {
-    margin: 0;
-    font-size: 2.5em;
-    font-weight: normal;
-    letter-spacing: 0.5em;
-  }
+.content-section {
+  padding: 8em 0 0 0;
+}
+.content-wrapper {
+  padding: 2em 4em;
+}
+h2 {
+  margin: 0;
+  font-size: 2.5em;
+  font-weight: normal;
+  letter-spacing: 0.5em;
+}
 
-  .content-subtitle {
-    font-size: 1.5em;
+.content-subtitle {
+  font-size: 1.5em;
+}
+.content-text {
+  inline-size: 42em;
+  overflow-wrap: break-word;
+  margin-left: auto;
+  font-size: 1em;
+  line-height: 1.8em;
+  letter-spacing: 0.18em;
+  width: 70%;
+  p {
+    white-space: pre-line;
   }
-  .content-text {
-    inline-size: 42em;
-    overflow-wrap: break-word;
-    margin-left: auto;
-    font-size: 1em;
-  }
+}
 
-  /**
+/**
   * Slider
   */
 
-  .slider-wrapper {
-    display: flex;
-    justify-content: flex-end;
-  }
-  .slider {
-    padding: 16px 0 0 16px;
-    margin-top: 5em;
-    width: 90%;
-    background: rgba(0, 0, 0, 0.1);
-  }
+.slider-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+.slider {
+  padding: 16px 0 0 16px;
+  margin-top: 5em;
+  width: 90%;
+  background: rgba(0, 0, 0, 0.1);
+}
 
-  @media screen and (max-width: 559px) {
-  }
+@media screen and (max-width: 559px) {
+}
 </style>

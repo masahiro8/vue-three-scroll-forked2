@@ -176,14 +176,14 @@
 </script>
 <style lang="scss" scoped>
   .header {
-    position: fixed; /* ヘッダーを固定する */
-    top: 0; /* 上部から配置の基準位置を決める */
-    left: 0; /* 左から配置の基準位置を決める */
-    width: 100%; /* ヘッダーの横幅を指定する */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 5;
     .header-content {
-      width: 100%; /* コンテンツの横幅を指定する */
-      overflow: auto; /* コンテンツの表示を自動に設定（スクロール） */
+      width: 100%;
+      overflow: auto;
       margin: 1.875em 0 0 1.875em;
       padding: 0;
       .icon {

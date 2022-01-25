@@ -40,6 +40,7 @@
     margin: 0;
     line-height: 2.25em;
     letter-spacing: 0.435em;
+    font-weight: 600;
   }
 }
 @media screen and (max-width: 559px) {
