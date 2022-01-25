@@ -18,7 +18,7 @@
           </div>
         </div>
         <!-- 画像 -->
-        <div class="slider-wrapper">
+        <div class="slider-wrapper" v-if="isImages(content)">
           <div class="slider">
             <Slider
               :type="SLIDER_TYPE.ARTICLE"
@@ -58,6 +58,11 @@ export default {
         },
       },
     };
+  },
+  methods: {
+    isImages(content) {
+      return "images" in content && content.images.length;
+    },
   },
 };
 </script>
