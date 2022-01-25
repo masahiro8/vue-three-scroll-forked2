@@ -93,8 +93,12 @@ h2 {
   overflow-wrap: break-word;
   margin-left: auto;
   font-size: 1em;
-  line-height: 1.625em;
-  letter-spacing: 0.1875em;
+  line-height: 1.8em;
+  letter-spacing: 0.18em;
+  width: 70%;
+  p {
+    white-space: pre-line;
+  }
 }
 
 /**
