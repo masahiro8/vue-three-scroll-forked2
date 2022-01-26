@@ -85,7 +85,7 @@ export const Scene = () => {
 
       // カメラの時間を取得
       const cameraClip = animations.find((item) =>
-        item.name.match(/^Camera.*/g)
+        item.name.match(/^Action.*/g)
       );
       if (cameraClip) {
         duration = cameraClip.duration;
