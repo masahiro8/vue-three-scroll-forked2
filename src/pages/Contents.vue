@@ -50,7 +50,10 @@ export default {
         // infiniteScroll: true,
         itemsToShow: 2.1,
         breakpoints: {
-          600: {
+          800: {
+            itemsToShow: 3.1,
+          },
+          1200: {
             itemsToShow: 4.1,
           },
         },
@@ -122,12 +125,13 @@ export default {
   }
   .content-section {
     padding: 6em 0 2em 0;
+    h2 {
+      padding: 0 16px;
+      letter-spacing: 0.3em;
+      font-size: 30px;
+    }
   }
-  h2 {
-    padding: 0 16px;
-    letter-spacing: 0.3em;
-    font-size: 30px;
-  }
+
   .content-wrapper {
     padding: 1.25em;
   }

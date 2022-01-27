@@ -239,6 +239,7 @@
     .footer-refer {
       margin: 8em 0 0;
       padding: 0;
+      width: 100%;
       h2 {
         font-weight: normal;
         font-size: 20px;
@@ -253,6 +254,7 @@
     .footer-credit {
       margin: 10em 0 0;
       padding: 0 0 8em;
+      width: 100%;
       h2 {
         font-weight: normal;
         font-size: 20px;
