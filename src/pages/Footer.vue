@@ -57,12 +57,17 @@
           沖縄タイムスのコンテンツにご興味のある方は<br />
           こちらからお申し込みください
         </p>
-        <div class="box">
-          <img
-            class="logo-image"
-            src="@/assets/image/okinawa-times-plus_logo.png"
-          />
-        </div>
+        <a
+          href="https://www.okinawatimes.co.jp/auth/preregistration"
+          target="_blank"
+        >
+          <div class="box">
+            <img
+              class="logo-image"
+              src="@/assets/image/okinawa-times-plus_logo.png"
+            />
+          </div>
+        </a>
       </div>
       <div class="footer-credit">
         <h2>クレジット</h2>
