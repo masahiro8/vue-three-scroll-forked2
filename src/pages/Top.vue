@@ -2,7 +2,7 @@
   <div class="wrap-video">
     <div class="text">
       <p class="subtitle">本土復帰５０周年</p>
-      <h2 class="title">OKINAWA　第３２軍司令部壕</h2>
+      <h2 class="title">OKINAWA 第３２軍司令部壕</h2>
     </div>
     <div v-if="src" class="movie">
       <video :src="src" muted autoplay loop></video>
