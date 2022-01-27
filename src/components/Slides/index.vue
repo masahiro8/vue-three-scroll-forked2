@@ -18,9 +18,10 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="21.5" cy="21.5" r="21" stroke="#786B58" />
-          <path d="m15 18-5 5h23" stroke="#786B58" /></svg
-      ></a>
+          <circle cx="21.5" cy="21.5" r="21" stroke="#fff" />
+          <path d="m15 18-5 5h23" stroke="#fff" />
+        </svg>
+      </a>
       <a class="Carousel__btn" @click.prevent="slideNext"
         ><svg
           width="43"
@@ -29,8 +30,8 @@
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <circle cx="21.5" cy="21.5" r="21" stroke="#786B58" />
-          <path d="m28 18 5 5H10" stroke="#786B58" /></svg
+          <circle cx="21.5" cy="21.5" r="21" stroke="#fff" />
+          <path d="m28 18 5 5H10" stroke="#fff" /></svg
       ></a>
     </div>
   </div>
