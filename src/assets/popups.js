@@ -186,7 +186,7 @@ export const popups = [
         thumb_url: "thumb-popup-image_04.png",
         src_url: "popup-image_04.jpg",
         caption:
-          "牛島司令官の部屋。第2坑道との交差点から第３坑道の西側に向かって撮影＝米公文書館所蔵、牛島貞満氏提供",
+          "牛島司令官の部屋近くの様子＝米公文書館所蔵、牛島貞満さん提供",
       },
       {
         id: 2,
@@ -205,7 +205,7 @@ export const popups = [
         id: 1,
         type: "image",
         thumb_url: "thumb-popup-image_06.png",
-        src_url: "popup-image_06.jpg",
+        src_url: "popup-image_06.png",
         caption:
           "第3坑口。現在の城西小学校の敷地内にあり、守礼門のほぼ下あたりに位置していた＝米公文書館所蔵、牛島貞満氏提供",
       },
@@ -222,29 +222,23 @@ export const popups = [
     id: 14,
     title: "第２坑道と第３坑道の結節点",
     images: [
+      
       {
         id: 1,
-        type: "image",
-        thumb_url: "thumb-popup-image_08.png",
-        src_url: "popup-image_08.png",
-        caption: "第２坑道と第３坑道の交差点＝米公文館所蔵、牛島貞満氏提供",
-      },
-      {
-        id: 2,
         type: "image",
         thumb_url: "thumb-popup-image_09.png",
         src_url: "popup-image_09.jpg",
         caption: "第２坑道と第３坑道の結節点＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
-        id: 3,
+        id: 2,
         type: "image",
         thumb_url: "thumb-popup-image_10.png",
         src_url: "popup-image_10.jpg",
         caption: "米公文書館所蔵、牛島貞満氏提供",
       },
       {
-        id: 4,
+        id: 3,
         type: "image",
         thumb_url: "thumb-popup-image_11.png",
         src_url: "popup-image_11.png",
@@ -252,7 +246,7 @@ export const popups = [
           "第2坑道の第32軍司令部作戦室で、日本軍が残した書類を調査する米軍＝米公文書館所蔵、牛島貞満氏提供",
       },
       {
-        id: 5,
+        id: 4,
         type: "image",
         thumb_url: "thumb-popup-image_12.png",
         src_url: "popup-image_12.jpg",
@@ -277,7 +271,7 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_14.png",
         src_url: "popup-image_14.jpg",
-        caption: "第32軍情報室(ポイント＃17)から爆破された第1坑道を見る＝米公文書館所蔵、牛島貞満氏提供",
+        caption: "第３２軍情報室から爆破された第1坑道を見る＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },

@@ -122,6 +122,16 @@ export const articles = [
             src_url: "body-image_11.jpg",
             caption: "",
           },
+          {
+            id: 3,
+            src_url: "body-image_18.jpg",
+            caption: "第３２軍司令部の留守名簿に名前のある１４歳を含む女性たちが、どのようにして第３２軍経理部築城班に動員されたかが記されている＝佐治暁人氏提供",
+          },
+          {
+            id: 4,
+            src_url: "body-image_19.jpg",
+            caption: "",
+          }
         ],
       },
       {
