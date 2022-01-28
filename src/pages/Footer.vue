@@ -3,11 +3,11 @@
     <div class="fotter-contents">
       <div class="footer-text">
         <h2>第2章への案内</h2>
-        <p>
-          南部撤退を決めた３２軍。２月上旬公開の第2章では、米軍の猛攻撃が続く中、どうやって衰退したのか南部撤退のルートを沖縄県平和祈念資料館友の会事務局長の仲村真さんとたどります。海岸まで追い込まれた３２軍の組織的戦闘は、どう終焉を迎えたのかを伝える。
+        <p class="intro">
+          &emsp;南部撤退を決めた第３２軍。２月上旬公開の第２章では、米軍の猛攻撃が続く中、どうやって南部に移動したのか。その撤退ルートを、沖縄県平和祈念資料館友の会の仲村真事務局長とたどります。海岸まで追い込まれた第３２軍の首脳や学徒たちが、どうなっていったのかについても伝えます。
         </p>
       </div>
-      <div class="footer-text">
+      <div class="footer-refer">
         <h2>参考・引用文献（５０音順）</h2>
         <p>・朝日新聞社編「知る沖縄戦」（2021年、朝日新聞社）</p>
         <p>
@@ -50,34 +50,41 @@
           ・八原博通著「沖縄決戦&emsp;―高級参謀の手記」（2015年、中央公論新社）
         </p>
         <p>・山川泰邦著「秘録&emsp;沖縄戦史」（1958年、沖縄グラフ社）</p>
-        <p>・濱川昌也著「私の沖縄戦記」（１９９０年、那覇出版社」）</p>
+        <p>・濱川昌也著「私の沖縄戦記」（1990年、那覇出版社」）</p>
       </div>
       <div class="footer-ads">
         <p class="text">
           沖縄タイムスのコンテンツにご興味のある方は<br />
           こちらからお申し込みください
         </p>
-        <div class="box">
-          <img
-            class="logo-image"
-            src="@/assets/image/okinawa-times-plus_logo.png"
-          />
-        </div>
+        <a
+          href="https://www.okinawatimes.co.jp/auth/preregistration"
+          target="_blank"
+        >
+          <div class="box">
+            <img
+              class="logo-image"
+              src="@/assets/image/okinawa-times-plus_logo.png"
+            />
+          </div>
+        </a>
       </div>
-      <div class="footer-text">
+      <div class="footer-credit">
         <h2>クレジット</h2>
-        <p>・取材&emsp;山中由睦（沖縄タイムス）、大城志織（沖縄タイムス）</p>
-        <p>・撮影&emsp;下地広也（沖縄タイムス）</p>
-        <p>・動画編集&emsp;儀武勝希（沖縄タイムス）</p>
-        <p>・グラフィック制作&emsp;池間寿和子（沖縄タイムス）</p>
         <p>
-          ・ＷＥＢデザイン・制作&emsp;黒川正裕、大田小波（ともに株式会社バッカム）
+          ・<span>取材</span>&emsp;山中由睦（沖縄タイムス）、大城志織（沖縄タイムス）
+        </p>
+        <p>・<span>撮影</span>&emsp;下地広也（沖縄タイムス）</p>
+        <p>・<span>動画編集</span>&emsp;儀武勝希（沖縄タイムス）</p>
+        <p>・<span>グラフィック制作</span>&emsp;池間寿和子（沖縄タイムス）</p>
+        <p>
+          ・<span>ＷＥＢデザイン・制作</span>&emsp;黒川正裕、大田小波（ともに株式会社バッカム）
         </p>
         <p>
-          ・監修協力&emsp;仲村真（沖縄県平和祈念資料館友の会事務局長）、吉浜忍（元沖縄国際大教授）、佐治暁人（大阪経済法科大学アジア太平洋研究センター客員研究員）
+          ・<span>監修協力</span>&emsp;仲村真（沖縄県平和祈念資料館友の会事務局長）、佐治暁人（大阪経済法科大学アジア太平洋研究センター客員研究員）
         </p>
         <p>
-          ・資料提供&emsp;牛島貞満、沖縄県公文書館、沖本富貴子、佐治暁人、那覇市歴史博物館
+          ・<span>資料提供</span>&emsp;牛島貞満、沖縄県公文書館、佐治暁人、那覇市歴史博物館
         </p>
       </div>
     </div>
@@ -113,14 +120,55 @@
     padding-top: 6.5em;
     h2 {
       font-weight: normal;
-      padding-bottom: 1.875em;
-      letter-spacing: 0.1em;
+      line-height: 2.25em;
+      letter-spacing: 0.435em;
     }
     p {
       font-size: 18px;
       letter-spacing: 0.1em;
       margin: 0;
       text-align: left;
+    }
+  }
+  .intro {
+    line-height: 2.25em;
+    letter-spacing: 0.435em;
+  }
+  .footer-refer {
+    padding-top: 6.5em;
+    width: 64em;
+    margin: auto;
+    h2 {
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      margin-bottom: 3em;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      margin: 5px 0;
+      text-align: left;
+    }
+  }
+  .footer-credit {
+    padding-top: 8.75em;
+    width: 64em;
+    margin: auto;
+    h2 {
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      margin-bottom: 3em;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      margin: 5px 0;
+      text-align: left;
+    }
+    span {
+      font-weight: bold;
     }
   }
   .footer-ads {
@@ -156,10 +204,31 @@
 }
 @media screen and (max-width: 559px) {
   .fotter-contents {
-    padding: 6.25em 0;
+    padding: 0 15px;
     color: #ffffff;
     position: relative;
     z-index: 1;
+    .footer-text {
+      padding-top: 5em;
+      width: 100%;
+      h2 {
+        padding-bottom: 0;
+        letter-spacing: 0.05em;
+      }
+      .intro {
+        line-height: 2.25em;
+        letter-spacing: 0.28em;
+      }
+      p {
+        margin-right: -0.5em;
+        font-size: 18px;
+        padding: 5px 0;
+      }
+    }
+    .footer-ads {
+      margin: 8em 0 0;
+      padding: 0;
+    }
     .subtitle {
       font-size: 1.2em;
       letter-spacing: 0.4em;
@@ -176,6 +245,36 @@
     }
     .box {
       width: 18.75em;
+    }
+    .footer-refer {
+      margin: 8em 0 0;
+      padding: 0;
+      width: 100%;
+      h2 {
+        font-weight: normal;
+        font-size: 20px;
+      }
+      p {
+        text-align: left;
+        margin: 0 -0.5em 0 0;
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
+    }
+    .footer-credit {
+      margin: 10em 0 0;
+      padding: 0 0 8em;
+      width: 100%;
+      h2 {
+        font-weight: normal;
+        font-size: 20px;
+      }
+      p {
+        text-align: left;
+        margin: 0 -0.5em 0 0;
+        font-size: 14px;
+        padding-bottom: 6px;
+      }
     }
   }
 }

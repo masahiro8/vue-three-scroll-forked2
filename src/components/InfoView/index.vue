@@ -5,6 +5,9 @@
       <p v-for="(text, index) in texts" :key="index">
         {{ text }}
       </p>
+
+      <p class="caution">※クリックすると拡大表示されます。</p>
+
       <Slider
         :type="SLIDER_TYPE.POPUP"
         :images="images"
@@ -139,6 +142,11 @@ export default {
     font-size: 50px;
     font-weight: bold;
     color: #fff;
+  }
+
+  .caution {
+    font-size: 12px;
+    margin: 0;
   }
 
   .slider {
