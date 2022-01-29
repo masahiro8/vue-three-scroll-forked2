@@ -28,7 +28,7 @@
     { id: 1, start: 0.06, length: 0.01 }, //1.発電機
     { id: 5, start: 0.13, length: 0.01 }, //5.電球
     { id: 4, start: 0.175, length: 0.01 }, //4.女性たちの部屋、炊事場
-    { id: 3, start: 0.221, length: 0.01 }, //3.トロッコレール
+    { id: 3, start: 0.21, length: 0.01 }, //3.トロッコレール
     { id: 6, start: 0.353, length: 0.01 }, //6. 水が噴出
     { id: 7, start: 0.483, length: 0.01 }, //7. 参謀室辺りの第１坑道
     { id: 8, start: 0.495, length: 0.01 }, //8. 第１坑道の参謀室
