@@ -4,15 +4,7 @@
     <transition name="fade">
       <Loading v-if="!isLoaded" :progress="loadingProgress" />
     </transition>
-    <div class="header">
-      <ul class="header-content">
-        <li><img class="icon" src="@/assets/logo.png" /></li>
-        <li class="header-text">
-          <p class="subtitle">沖縄本土復帰50周年</p>
-          <p class="title">知る32軍壕</p>
-        </li>
-      </ul>
-    </div>
+    <Header />
     <div v-if="isLoaded">
       <Top v-if="isLoaded" :src="getHeadMovie" id="loading" class="loading" />
       <About v-if="isLoaded" id="loading" class="loading" />
@@ -43,6 +35,7 @@
   import Contents from "./Contents.vue";
   import Footer from "./Footer.vue";
   import InfoView from "../components/InfoView/index.vue";
+  import Header from "../components/Header/index.vue";
   import Loading from "../components/Loading/index.vue";
   import { popups } from "../assets/popups";
   import { articles } from "../assets/articles";
@@ -93,6 +86,7 @@
       });
     },
     components: {
+      Header,
       ThreeScene,
       ScrollNavi,
       Modal,
@@ -175,43 +169,6 @@
   };
 </script>
 <style lang="scss" scoped>
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-    .header-content {
-      width: 100%;
-      overflow: auto;
-      margin: 1.875em 0 0 1.875em;
-      padding: 0;
-      .icon {
-        width: 48px;
-      }
-      li {
-        float: left;
-        list-style: none;
-      }
-      .header-text {
-        margin-left: 0.875em;
-        color: #ffffff;
-        opacity: 0.4;
-        letter-spacing: 0.435em;
-      }
-      .subtitle {
-        font-size: 12px;
-        margin: 0;
-        padding: 0;
-      }
-      .title {
-        font-size: 16px;
-        margin: 0;
-        padding: 0;
-      }
-    }
-  }
-
   .isModal {
     filter: blur(10px);
   }

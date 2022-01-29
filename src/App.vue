@@ -31,4 +31,9 @@
     margin: 0;
     padding: 0;
   }
+  * {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+      Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+      メイリオ, Meiryo, sans-serif;
+  }
 </style>
