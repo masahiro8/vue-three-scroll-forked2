@@ -2,11 +2,20 @@
   <div ref="three" class="wrapper" :style="goastSectionStyle">
     <div class="section" :class="extraClass">
       <div class="three__title">３Ｄで再現した壕内の基本構造</div>
+      <div class="three__link">
+        <a
+          class="three__link__btn"
+          href="https://backham.me?#vr"
+          target="_blank"
+        >
+          <div class="three__link__caption">System supported by</div>
+          <div class="three__link__name">BACKHAM VR</div>
+        </a>
+      </div>
       <div class="map">
         <img :src="`./images/map.png`" alt="" />
       </div>
       <div id="three" />
-      <!-- <button class="btn1" @click.prevent="addPoint">start</button> -->
     </div>
     <div class="goastSection"></div>
   </div>
@@ -130,15 +139,39 @@
     left: 16px;
     text-align: left;
   }
+
+  .three__link {
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 100%;
+    padding: 4px 0;
+    text-align: center;
+    filter: invert(0.8);
+
+    .three__link__btn {
+      display: inline-block;
+      color: rgb(78, 58, 34);
+      text-decoration: none;
+    }
+    .three__link__caption {
+      font-size: 9px;
+      padding-bottom: 4px;
+    }
+    .three__link__name {
+      font-size: 14px;
+    }
+  }
   .map {
     width: 250px;
     height: 450px;
     position: absolute;
-    bottom: 16px;
+    bottom: 32px;
     left: 16px;
     z-index: 9;
     @media screen and (max-width: 559px) {
-      width: 150px;
+      width: 140px;
+      left: 0;
       height: auto;
     }
   }
