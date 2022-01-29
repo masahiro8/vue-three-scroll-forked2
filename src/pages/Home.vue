@@ -127,7 +127,7 @@
        */
       async onLoadAssets() {
         const _ASSETS = await loader().getFiles(
-          [ASSETS.HEAD_MOVIE, ASSETS.GLTF_MODEL, ASSETS.INTERVIEW_1],
+          [ASSETS.HEAD_MOVIE, ASSETS.GLTF_MODEL],
           (progress) => {
             const total = Object.keys(progress).length * 100;
             const current = Object.keys(progress)
@@ -228,9 +228,9 @@
   }
 </style>
 <style lang="scss">
-body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
-    Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
-    メイリオ, Meiryo, sans-serif;
-}
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, Helvetica Neue, Segoe UI,
+      Hiragino Kaku Gothic ProN, Hiragino Sans, ヒラギノ角ゴ ProN W3, Arial,
+      メイリオ, Meiryo, sans-serif;
+  }
 </style>
