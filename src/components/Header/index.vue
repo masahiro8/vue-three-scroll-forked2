@@ -14,15 +14,33 @@
       </li>
     </ul>
     <div class="header-sns">
-      <button class="header-btn">
+      <a class="header-btn" :href="twitterURL" target="_blank" rel="nofollow">
         <img :src="`./images/i_twitter.png`" alt="Twitter" />
-      </button>
-      <button class="header-btn">
+      </a>
+      <a class="header-btn" :href="facebookURL" target="_blank" rel="nofollow">
         <img :src="`./images/i_facebook.png`" alt="Facebook" />
-      </button>
+      </a>
     </div>
   </div>
 </template>
+<script>
+  import { meta } from "../../constants";
+  export default {
+    data: () => {
+      return {
+        meta,
+      };
+    },
+    computed: {
+      twitterURL() {
+        return `https://twitter.com/intent/tweet?url=${location.href}&text=${this.meta.title}`;
+      },
+      facebookURL() {
+        return `https://www.facebook.com/sharer/sharer.php?u=${location.href}&t=${this.meta.title}`;
+      },
+    },
+  };
+</script>
 <style lang="scss" scoped>
   .header {
     position: fixed;

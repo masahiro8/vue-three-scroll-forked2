@@ -5,7 +5,10 @@
 </template>
 
 <script>
+  import Vue from "vue";
+  import VueSocialSharing from "vue-social-sharing";
   import Home from "./pages/Home.vue";
+  Vue.use(VueSocialSharing);
 
   export default {
     name: "App",
