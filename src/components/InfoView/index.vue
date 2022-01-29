@@ -94,7 +94,7 @@
     top: 0;
     transition: all 0.3s ease-out;
     transform: translateX(429px);
-    z-index: 99;
+    z-index: 9;
     overflow: auto;
   }
 

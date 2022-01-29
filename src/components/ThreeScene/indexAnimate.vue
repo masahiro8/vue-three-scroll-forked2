@@ -126,8 +126,8 @@
     font-size: 16px;
     color: white;
     position: absolute;
-    top: 96px;
-    left: 32px;
+    top: 54px;
+    left: 16px;
     text-align: left;
   }
   .map {

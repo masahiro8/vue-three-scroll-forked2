@@ -1,8 +1,8 @@
 <template>
   <div class="Loading">
     <div class="Loading__label">
-      <div>O K I N A W A</div>
-      <div>第 3 2 軍 壕</div>
+      <div class="Loading__label__text">O K I N A W A</div>
+      <div class="Loading__label__text">第 3 2 軍 壕</div>
     </div>
 
     <div class="Loading__progress">
@@ -51,8 +51,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 50%;
+    align-items: center;
+    // height: 50%;
     font-size: 1.1em;
+    text-align: center;
+  }
+
+  .Loading__label__text {
+    margin: 8px 0;
   }
 
   .Loading__text {

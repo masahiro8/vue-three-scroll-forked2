@@ -148,7 +148,7 @@
       .modal {
         position: relative;
         display: block;
-        z-index: 2;
+        z-index: 10;
       }
     }
   }
