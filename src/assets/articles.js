@@ -11,19 +11,20 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_1.jpg",
-            caption: "",
+            caption: "３２軍の牛島満司令官（那覇市歴史博物館提供）",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-image_2.jpg",
-            caption: "",
+            caption: "３２軍の首脳部が写った集合写真（那覇市歴史博物館提供）",
           },
           {
             id: 3,
             type: "image",
             src_url: "body-image_3.jpg",
-            caption: "",
+            caption:
+              "牛島司令官が１９４５年2月15日に軍民に出した戦闘指針。「一人十殺一戦車」と記されている（那覇市歴史博物館提供）",
           },
           {
             id: 4,
@@ -41,25 +42,28 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_4.jpg",
-            caption: "",
+            caption:
+              "沖縄本島に上陸した米軍（１９４５年４月１日、沖縄県公文書館所蔵）",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-image_5.jpg",
-            caption: "",
+            caption:
+              "戦闘中の米軍海兵隊員。日本軍の狙撃兵に向かって火炎放射をしている（１９４５年５月、沖縄県公文書館所蔵）",
           },
           {
             id: 3,
             type: "image",
             src_url: "body-image_6.jpg",
-            caption: "",
+            caption:
+              "激しい戦闘となったシュガー・ローフ（那覇市おもろまち（１９４５年５月２３日、沖縄県公文書館所蔵）",
           },
           {
             id: 4,
             type: "image",
             src_url: "body-graphic_2.png",
-            caption: "",
+            caption: "沖縄戦の経過、第３２軍の動き",
           },
         ],
       },
@@ -77,7 +81,7 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-graphic_3.png",
-            caption: "",
+            caption: "首里の司令部壕とはどんな場所だった",
           },
           {
             id: 2,
@@ -95,19 +99,22 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_7.png",
-            caption: "",
+            caption:
+              "３２軍司令部壕にあった縦杭。深さは約３４㍍で、１０階建てのビルの高さに相当する（米軍公文書館所蔵、牛島貞満さん提供）",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-image_8.jpg",
-            caption: "",
+            caption:
+              "第１坑道中央にあったとされる司令官室（那覇市歴史博物館所蔵）",
           },
           {
             id: 3,
             type: "image",
             src_url: "body-image_9.jpg",
-            caption: "",
+            caption:
+              "第１坑道の通路。道沿いに寝台が設置されている（那覇市歴史博物館所蔵）",
           },
         ],
       },
@@ -129,13 +136,13 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_10.jpg",
-            caption: "",
+            caption: "留守名簿（沖縄）の表紙",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-image_11.jpg",
-            caption: "",
+            caption: "留守名簿（南方）の表紙",
           },
           {
             id: 3,
@@ -160,7 +167,7 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-graphic_5.png",
-            caption: "",
+            caption: "データ用・留守名簿グラフ",
           },
         ],
       },
@@ -172,7 +179,8 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_12.jpg",
-            caption: "",
+            caption:
+              "沖縄県の住民を集める米軍（１９４５年４月１日、沖縄県公文書館所蔵）",
           },
         ],
       },
@@ -184,13 +192,15 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_13.jpg",
-            caption: "",
+            caption:
+              "米軍の上陸におびえる慶留間島の女性たち（１９４５年４月７日、沖縄県公文書館所蔵）",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-image_14.jpg",
-            caption: "",
+            caption:
+              "米軍に投降して水を飲む女性（１９４５年５月、沖縄県公文書館所蔵）",
           },
         ],
       },
@@ -208,19 +218,21 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_15.jpg",
-            caption: "",
+            caption:
+              "首里城周辺の教会。日本軍は塔を狙撃兵の隠れ家として使用した（１９４５年５月、沖縄県公文書館所蔵）",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-image_16.jpg",
-            caption: "",
+            caption:
+              "廃墟と化した首里城。がれきの山となっている（１９４５年５月２９日、沖縄県公文書館所蔵）",
           },
           {
             id: 3,
             type: "image",
             src_url: "body-graphic_6.png",
-            caption: "",
+            caption: "米軍、３２軍の動き",
           },
         ],
       },
@@ -232,13 +244,14 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-image_16.jpg",
-            caption: "",
+            caption:
+              "がれきとなった首里城の城壁。焼け残った樹木は、城を囲んでいた森の一部（１９４５年５月、沖縄県公文書館所蔵）",
           },
           {
             id: 2,
             type: "image",
             src_url: "body-graphic_7.png",
-            caption: "",
+            caption: "沖縄戦の戦没者数の円グラフ",
           },
         ],
       },
