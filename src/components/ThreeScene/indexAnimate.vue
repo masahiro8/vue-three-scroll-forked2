@@ -1,6 +1,10 @@
 <template>
   <div ref="three" class="wrapper" :style="goastSectionStyle">
     <div class="section" :class="extraClass">
+      <div class="three__title">３Ｄで再現した壕内の基本構造</div>
+      <div class="map">
+        <img :src="`./images/map.png`" alt="" />
+      </div>
       <div id="three" />
       <!-- <button class="btn1" @click.prevent="addPoint">start</button> -->
     </div>
@@ -118,6 +122,25 @@
   };
 </script>
 <style scoped>
+  .three__title {
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 96px;
+    left: 32px;
+    text-align: left;
+  }
+  .map {
+    width: 250px;
+    height: 450px;
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 9;
+  }
+  .map img {
+    width: 100%;
+  }
   body {
     margin: 0;
     overflow: hidden;

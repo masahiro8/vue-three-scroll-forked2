@@ -74,14 +74,15 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_02.png",
         src_url: "popup-image_02.jpg",
-        caption: "炊事場の写真。米軍が旧日本軍の書類を発見した＝米公文書館所蔵、牛島貞満氏提供",
+        caption:
+          "炊事場の写真。米軍が旧日本軍の書類を発見した＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
   {
     id: 5,
     title: "電灯、電球",
-    text_1:"発電機を冷やす水を運んだ古堅実吉さん",
+    text_1: "発電機を冷やす水を運んだ古堅実吉さん",
     images: [
       {
         id: 1,
@@ -130,7 +131,7 @@ export const popups = [
   },
   {
     id: 8,
-    title: "第１坑道の参謀室",
+    title: "参謀室",
     text_1:
       "ハンタン山のベトンの壕入口から両側には米俵が三俵ずつほどずっと重ねられて、その上に兵隊がゴロゴロ昼夜をわかたず寝ていた。三十メートルほど奧にいくと参謀室があった。これがこの壕の中枢で、沖縄戦の作戦本部である。電話器がずらっと並んで、十名ぐらいの参謀が、胸に金モールの参謀肩章をつけて、いそがしそうに電話をしたり、図面をひいたりしている。そこだけは電灯が煌々と輝いて、はなやいでみえた。のりのきいた白い半袖の開襟シャツにピカピカの長靴をはいた参謀たちは、眼をかがやかし、栄養たっぷりな元気な声で前線に司令をおこなっている。周囲の暗い壕の米俵の上には虚無的な顔をした兵隊たちが黙々と寝ている。十触光ぐらいの電灯が十メートルおきぐらいに赤くともっていて、そこから参謀室をみるとまるで別世界のようにうつった。「新聞人の沖縄戦記」「那覇市史」資料篇第２巻中の６から引用、元沖縄新報記者の仲元政基さんの記述",
   },
@@ -147,14 +148,14 @@ export const popups = [
         thumb_url: "thumb-popup-mv_07.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1BttxptqfjXtFTAl1V0_164GRlM7JemfP",
-        caption:"伝令として壕内に入った宮平盛彦さん",
+        caption: "伝令として壕内に入った宮平盛彦さん",
       },
     ],
   },
   {
     id: 10,
     title: "アカギの木",
-    text_1:"発電機を冷やす水を運んだ古堅実吉さん",
+    text_1: "発電機を冷やす水を運んだ古堅実吉さん",
     images: [
       {
         id: 1,
@@ -162,7 +163,7 @@ export const popups = [
         thumb_url: "thumb-popup-mv_08.png",
         src_url:
           "https://drive.google.com/uc?export=download&id=1UuP4_6PBsX8l7FoNcNBGSnn9Sc6Lo2wN",
-        caption:"発電機を冷やす水を運んだ古堅実吉さん"
+        caption: "発電機を冷やす水を運んだ古堅実吉さん",
       },
     ],
   },
@@ -185,8 +186,7 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_04.png",
         src_url: "popup-image_04.jpg",
-        caption:
-          "牛島司令官の部屋近くの様子＝米公文書館所蔵、牛島貞満さん提供",
+        caption: "牛島司令官の部屋近くの様子＝米公文書館所蔵、牛島貞満さん提供",
       },
       {
         id: 2,
@@ -222,7 +222,6 @@ export const popups = [
     id: 14,
     title: "第２坑道と第３坑道の結節点",
     images: [
-      
       {
         id: 1,
         type: "image",
@@ -250,7 +249,8 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_12.png",
         src_url: "popup-image_12.jpg",
-        caption: "第32軍作戦室。この奥は第2坑口＝米公文書館所蔵、牛島貞満氏提供",
+        caption:
+          "第32軍作戦室。この奥は第2坑口＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
@@ -271,7 +271,8 @@ export const popups = [
         type: "image",
         thumb_url: "thumb-popup-image_14.png",
         src_url: "popup-image_14.jpg",
-        caption: "第３２軍情報室から爆破された第1坑道を見る＝米公文書館所蔵、牛島貞満氏提供",
+        caption:
+          "第３２軍情報室から爆破された第1坑道を見る＝米公文書館所蔵、牛島貞満氏提供",
       },
     ],
   },
