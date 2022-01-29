@@ -94,7 +94,7 @@
     top: 0;
     transition: all 0.3s ease-out;
     transform: translateX(429px);
-    z-index: 2;
+    z-index: 99;
     overflow: auto;
   }
 
@@ -207,7 +207,7 @@
   }
   @media screen and (max-width: 559px) {
     .InfoView {
-      width: 70vw;
+      width: 95%;
       height: 100%;
     }
     .infoView-contents {

@@ -158,6 +158,10 @@
     height: 80%;
     text-align: center;
     background: black;
+    @media screen and (max-width: 559px) {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .modal__close {
@@ -205,6 +209,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100%;
     video {
       width: 100%;
     }

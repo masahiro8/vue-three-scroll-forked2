@@ -141,6 +141,11 @@
     }
     .slider {
       margin-top: 2em;
+      width: 100%;
+
+      .caution {
+        padding-left: 8px;
+      }
     }
   }
 </style>

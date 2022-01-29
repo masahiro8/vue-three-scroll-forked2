@@ -3,8 +3,16 @@
 }
 .Carousel {
   padding: 8px 0;
+  @media screen and (max-width: 559px) {
+    padding-left: 8px;
+  }
 }
 .Carousel__body {
+  @media screen and (max-width: 559px) {
+    .hooper-slide {
+      margin-right: 16px;
+    }
+  }
 }
 .Carousel__image {
   display: flex;

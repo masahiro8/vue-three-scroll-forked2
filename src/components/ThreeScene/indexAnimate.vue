@@ -121,7 +121,7 @@
     },
   };
 </script>
-<style scoped>
+<style lang="scss" scoped>
   .three__title {
     font-size: 16px;
     color: white;
@@ -137,6 +137,10 @@
     bottom: 16px;
     left: 16px;
     z-index: 9;
+    @media screen and (max-width: 559px) {
+      width: 150px;
+      height: auto;
+    }
   }
   .map img {
     width: 100%;
