@@ -38,102 +38,102 @@
 </template>
 
 <script>
-import { Hooper, Slide } from "hooper";
-import "hooper/dist/hooper.css";
-import { modal } from "../Modal/index.vue";
+  import { Hooper, Slide } from "hooper";
+  import "hooper/dist/hooper.css";
+  import { modal } from "../Modal/index.vue";
 
-export const SLIDER_TYPE = {
-  ARTICLE: "article",
-  POPUP: "popup",
-};
+  export const SLIDER_TYPE = {
+    ARTICLE: "article",
+    POPUP: "popup",
+  };
 
-export default {
-  data() {
-    return {
-      carouselData: 0,
-    };
-  },
-  props: {
-    images: {
-      type: Array,
-      defaultValue: [],
+  export default {
+    data() {
+      return {
+        carouselData: 0,
+      };
     },
-    srcKeyName: {
-      type: String,
-      defaultValue: "src",
+    props: {
+      images: {
+        type: Array,
+        defaultValue: [],
+      },
+      srcKeyName: {
+        type: String,
+        defaultValue: "src",
+      },
+      type: {
+        type: String,
+        defaultValue: SLIDER_TYPE.ARTICLE,
+      },
+      setting: {
+        type: Object,
+      },
     },
-    type: {
-      type: String,
-      defaultValue: SLIDER_TYPE.ARTICLE,
+    components: {
+      Hooper,
+      Slide,
     },
-    setting: {
-      type: Object,
+    watch: {
+      carouselData() {
+        this.$refs.carousel.slideTo(this.carouselData);
+      },
     },
-  },
-  components: {
-    Hooper,
-    Slide,
-  },
-  watch: {
-    carouselData() {
-      this.$refs.carousel.slideTo(this.carouselData);
+    computed: {
+      getImageClass() {
+        return this.type === SLIDER_TYPE.ARTICLE ? "article" : "popup";
+      },
     },
-  },
-  computed: {
-    getImageClass() {
-      return this.type === SLIDER_TYPE.ARTICLE ? "article" : "popup";
+    methods: {
+      slidePrev() {
+        this.$refs.carousel.slidePrev();
+      },
+      slideNext() {
+        this.$refs.carousel.slideNext();
+      },
+      updateCarousel(payload) {
+        this.myCarouselData = payload.currentSlide;
+      },
+      onClickContent(image) {
+        console.log("onClickContent", this.type, image);
+        modal.show(image);
+      },
     },
-  },
-  methods: {
-    slidePrev() {
-      this.$refs.carousel.slidePrev();
-    },
-    slideNext() {
-      this.$refs.carousel.slideNext();
-    },
-    updateCarousel(payload) {
-      this.myCarouselData = payload.currentSlide;
-    },
-    onClickContent(image) {
-      console.log("onClickContent");
-      modal.show(image);
-    },
-  },
-};
+  };
 </script>
 <style lang="scss" scoped>
-@import "./slider.scss";
-.Carousel {
-  &.popup {
-    .hooper {
-      height: 140px !important;
-    }
-    .Carousel__image {
-      width: 120px;
-      height: 120px;
-    }
-  }
-  &.article {
-    .hooper {
-      height: 240px !important;
-    }
-    .Carousel__image {
-      width: 220px;
-      height: 220px;
-    }
-  }
-}
-@media screen and (max-width: 559px) {
+  @import "./slider.scss";
   .Carousel {
-    &.article {
+    &.popup {
       .hooper {
-        height: 180px !important;
+        height: 140px !important;
       }
       .Carousel__image {
-        width: 150px;
-        height: 150px;
+        width: 120px;
+        height: 120px;
+      }
+    }
+    &.article {
+      .hooper {
+        height: 240px !important;
+      }
+      .Carousel__image {
+        width: 220px;
+        height: 220px;
       }
     }
   }
-}
+  @media screen and (max-width: 559px) {
+    .Carousel {
+      &.article {
+        .hooper {
+          height: 180px !important;
+        }
+        .Carousel__image {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+  }
 </style>

@@ -9,21 +9,25 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_1.jpg",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-image_2.jpg",
             caption: "",
           },
           {
             id: 3,
+            type: "image",
             src_url: "body-image_3.jpg",
             caption: "",
           },
           {
             id: 4,
+            type: "image",
             src_url: "body-graphic_1.png",
             caption: "",
           },
@@ -35,21 +39,25 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_4.jpg",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-image_5.jpg",
             caption: "",
           },
           {
             id: 3,
+            type: "image",
             src_url: "body-image_6.jpg",
             caption: "",
           },
           {
             id: 4,
+            type: "image",
             src_url: "body-graphic_2.png",
             caption: "",
           },
@@ -67,11 +75,13 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-graphic_3.png",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-graphic_4.png",
             caption: "",
           },
@@ -83,16 +93,19 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_7.png",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-image_8.jpg",
             caption: "",
           },
           {
             id: 3,
+            type: "image",
             src_url: "body-image_9.jpg",
             caption: "",
           },
@@ -114,24 +127,29 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_10.jpg",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-image_11.jpg",
             caption: "",
           },
           {
             id: 3,
+            type: "image",
             src_url: "body-image_18.jpg",
-            caption: "第３２軍司令部の留守名簿に名前のある１４歳を含む女性たちが、どのようにして第３２軍経理部築城班に動員されたかが記されている＝佐治暁人氏提供",
+            caption:
+              "第３２軍司令部の留守名簿に名前のある１４歳を含む女性たちが、どのようにして第３２軍経理部築城班に動員されたかが記されている＝佐治暁人氏提供",
           },
           {
             id: 4,
+            type: "image",
             src_url: "body-image_19.jpg",
             caption: "",
-          }
+          },
         ],
       },
       {
@@ -140,6 +158,7 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-graphic_5.png",
             caption: "",
           },
@@ -151,6 +170,7 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_12.jpg",
             caption: "",
           },
@@ -162,11 +182,13 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_13.jpg",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-image_14.jpg",
             caption: "",
           },
@@ -184,16 +206,19 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_15.jpg",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-image_16.jpg",
             caption: "",
           },
           {
             id: 3,
+            type: "image",
             src_url: "body-graphic_6.png",
             caption: "",
           },
@@ -205,11 +230,13 @@ export const articles = [
         images: [
           {
             id: 1,
+            type: "image",
             src_url: "body-image_16.jpg",
             caption: "",
           },
           {
             id: 2,
+            type: "image",
             src_url: "body-graphic_7.png",
             caption: "",
           },
