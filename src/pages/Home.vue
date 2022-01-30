@@ -2,7 +2,7 @@
   <div class="main">
     <Modal />
     <transition name="fade">
-      <Loading v-if="!isLoaded" :progress="loadingProgress" />
+      <Loading v-if="!isCloseLoading" :progress="loadingProgress" />
     </transition>
     <Header />
     <div v-if="isLoaded">
@@ -53,6 +53,7 @@
           HEAD_MOVIE: null,
         },
         isLoaded: false,
+        isCloseLoading: false,
         loadingProgress: 0,
         articles,
         item: [],
@@ -135,10 +136,11 @@
           HEAD_MOVIE: _ASSETS.find((item) => item.key === "HEAD_MOVIE"),
           GLTF_MODEL: _ASSETS.find((item) => item.key === "GLTF_MODEL"),
         };
+        this.isLoaded = true;
 
         setTimeout(() => {
-          this.isLoaded = true;
-        }, 1000);
+          this.isCloseLoading = true;
+        }, 3000);
       },
       openModal(image) {
         this.showContent = true;
