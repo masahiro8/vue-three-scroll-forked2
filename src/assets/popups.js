@@ -147,7 +147,7 @@ export const popups = [
         type: "video",
         thumb_url: "thumb-popup-mv_07.png",
         src_url:
-          "https://drive.google.com/uc?export=download&id=1BttxptqfjXtFTAl1V0_164GRlM7JemfP",
+          "https://drive.google.com/uc?export=download&id=1HWkYKee3HeU2YO-6Baj0G-9El4r7g_p7",
         caption: "伝令として壕内に入った宮平盛彦さん",
       },
     ],
