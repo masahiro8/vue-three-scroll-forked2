@@ -167,7 +167,7 @@ export const articles = [
             id: 1,
             type: "image",
             src_url: "body-graphic_5.png",
-            caption: "データ用・留守名簿グラフ",
+            caption: "留守名簿グラフ",
           },
         ],
       },
