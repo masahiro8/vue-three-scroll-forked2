@@ -27,6 +27,7 @@
   import * as THREE from "three/build/three.module";
   import { Scene } from "./components/scene_animate";
   import { STATE, EnterState } from "../../util/Events";
+  import { ASSETS } from "../../assets/assets.js";
 
   let scene;
 
@@ -56,7 +57,7 @@
     { id: 13, start: 0.963, length: 0.01 }, //13. 第3坑口
   ];
 
-  const modelUrl = "/data/data.glb?s=1";
+  const modelUrl = ASSETS.GLTF_MODEL.url;
 
   export default {
     name: "ThreeScene",
