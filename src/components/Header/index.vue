@@ -24,19 +24,28 @@
   </div>
 </template>
 <script>
-  import { meta } from "../../constants";
+  import { meta, shareUrl } from "../../constants";
   export default {
     data: () => {
       return {
         meta,
+        shareUrl,
       };
     },
     computed: {
       twitterURL() {
-        return `https://twitter.com/intent/tweet?url=${location.href}&text=${this.meta.title}`;
+        return encodeURI(
+          `https://twitter.com/intent/tweet?url=${
+            this.shareUrl || location.href
+          }&text=${this.meta.title}`
+        );
       },
       facebookURL() {
-        return `https://www.facebook.com/sharer/sharer.php?u=${location.href}&t=${this.meta.title}`;
+        return encodeURI(
+          `https://www.facebook.com/sharer/sharer.php?u=${
+            this.shareUrl || location.href
+          }&t=${this.meta.title}`
+        );
       },
     },
   };
