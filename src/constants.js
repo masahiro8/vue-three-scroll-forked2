@@ -7,4 +7,4 @@ export const meta = {
 };
 
 export const shareUrl =
-  "www.okinawatimes.co.jp/feature/the32nd-army-headquarters-cave/";
+  "https://www.okinawatimes.co.jp/common/otp/feature/the32nd-army-headquarters-cave/";
