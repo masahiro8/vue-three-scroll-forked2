@@ -64,7 +64,7 @@
           <div class="box">
             <img
               class="logo-image"
-              src="@/assets/image/okinawa-times-plus_logo.png"
+              :src="`./resources/okinawa-times-plus_logo.png`"
             />
           </div>
         </a>
@@ -92,190 +92,190 @@
 </template>
 
 <style lang="scss" scoped>
-.fotter {
-  background: url("~@/assets/image/background.png");
-  background-size: cover;
-  background-position: 50%;
-  position: relative;
+  .fotter {
+    background: url("/resources/background.png");
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
 
-  &::after {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.5);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-  }
-}
-.fotter-contents {
-  text-align: center;
-  color: #ffffff;
-  position: relative;
-  z-index: 1;
-  padding-bottom: 13.75em;
-  .footer-text {
-    width: 64em;
-    margin: auto;
-    padding-top: 6.5em;
-    h2 {
-      font-weight: normal;
-      line-height: 2.25em;
-      letter-spacing: 0.435em;
-    }
-    p {
-      font-size: 18px;
-      letter-spacing: 0.1em;
-      margin: 0;
-      text-align: left;
+    &::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
     }
   }
-  .intro {
-    line-height: 2.25em;
-    letter-spacing: 0.435em;
-  }
-  .footer-refer {
-    padding-top: 6.5em;
-    width: 64em;
-    margin: auto;
-    h2 {
-      font-weight: normal;
-      line-height: 24px;
-      letter-spacing: 0.1em;
-      margin-bottom: 3em;
-    }
-    p {
-      font-size: 14px;
-      letter-spacing: 0.1em;
-      margin: 5px 0;
-      text-align: left;
-    }
-  }
-  .footer-credit {
-    padding-top: 8.75em;
-    width: 64em;
-    margin: auto;
-    h2 {
-      font-weight: normal;
-      line-height: 24px;
-      letter-spacing: 0.1em;
-      margin-bottom: 3em;
-    }
-    p {
-      font-size: 14px;
-      letter-spacing: 0.1em;
-      margin: 5px 0;
-      text-align: left;
-    }
-    span {
-      font-weight: bold;
-    }
-  }
-  .footer-ads {
-    padding-top: 7.5em;
-  }
-  .subtitle {
-    font-size: 1.5em;
-    margin: 0;
-    letter-spacing: 0.435em;
-  }
-  .title {
-    font-size: 2.25em;
-    font-weight: normal;
-    margin: 0;
-    letter-spacing: 0.435em;
-  }
-  .text {
-    font-size: 18px;
-    letter-spacing: 0.1em;
-  }
-  .box {
-    padding: 0.5em 1em;
-    margin: 0 auto;
-    color: #2c2c2f;
-    background: #d9dccc;
-    max-width: 403px;
-    margin-top: 2.8125em;
-    img {
-      width: 80%;
-      height: auto;
-    }
-  }
-}
-@media screen and (max-width: 559px) {
   .fotter-contents {
-    padding: 0 15px;
+    text-align: center;
     color: #ffffff;
     position: relative;
     z-index: 1;
+    padding-bottom: 13.75em;
     .footer-text {
-      padding-top: 5em;
-      width: 100%;
-      h2 {
-        padding-bottom: 0;
-        letter-spacing: 0.05em;
-      }
-      .intro {
-        line-height: 2.25em;
-        letter-spacing: 0.28em;
-      }
-      p {
-        margin-right: -0.5em;
-        font-size: 18px;
-        padding: 5px 0;
-      }
-    }
-    .footer-ads {
-      margin: 8em 0 0;
-      padding: 0;
-    }
-    .subtitle {
-      font-size: 1.2em;
-      letter-spacing: 0.4em;
-    }
-    .title {
-      font-size: 1.8em;
-      font-weight: normal;
-      letter-spacing: 0.25em;
-    }
-    .text {
-      font-size: 1em;
-      letter-spacing: 0.08em;
-      margin-bottom: 0;
-    }
-    .box {
-      width: 18.75em;
-    }
-    .footer-refer {
-      margin: 8em 0 0;
-      padding: 0;
-      width: 100%;
+      width: 64em;
+      margin: auto;
+      padding-top: 6.5em;
       h2 {
         font-weight: normal;
-        font-size: 20px;
+        line-height: 2.25em;
+        letter-spacing: 0.435em;
       }
       p {
+        font-size: 18px;
+        letter-spacing: 0.1em;
+        margin: 0;
         text-align: left;
-        margin: 0 -0.5em 0 0;
+      }
+    }
+    .intro {
+      line-height: 2.25em;
+      letter-spacing: 0.435em;
+    }
+    .footer-refer {
+      padding-top: 6.5em;
+      width: 64em;
+      margin: auto;
+      h2 {
+        font-weight: normal;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        margin-bottom: 3em;
+      }
+      p {
         font-size: 14px;
-        padding-bottom: 6px;
+        letter-spacing: 0.1em;
+        margin: 5px 0;
+        text-align: left;
       }
     }
     .footer-credit {
-      margin: 10em 0 0;
-      padding: 0 0 8em;
-      width: 100%;
+      padding-top: 8.75em;
+      width: 64em;
+      margin: auto;
       h2 {
         font-weight: normal;
-        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 0.1em;
+        margin-bottom: 3em;
       }
       p {
-        text-align: left;
-        margin: 0 -0.5em 0 0;
         font-size: 14px;
-        padding-bottom: 6px;
+        letter-spacing: 0.1em;
+        margin: 5px 0;
+        text-align: left;
+      }
+      span {
+        font-weight: bold;
+      }
+    }
+    .footer-ads {
+      padding-top: 7.5em;
+    }
+    .subtitle {
+      font-size: 1.5em;
+      margin: 0;
+      letter-spacing: 0.435em;
+    }
+    .title {
+      font-size: 2.25em;
+      font-weight: normal;
+      margin: 0;
+      letter-spacing: 0.435em;
+    }
+    .text {
+      font-size: 18px;
+      letter-spacing: 0.1em;
+    }
+    .box {
+      padding: 0.5em 1em;
+      margin: 0 auto;
+      color: #2c2c2f;
+      background: #d9dccc;
+      max-width: 403px;
+      margin-top: 2.8125em;
+      img {
+        width: 80%;
+        height: auto;
       }
     }
   }
-}
+  @media screen and (max-width: 559px) {
+    .fotter-contents {
+      padding: 0 15px;
+      color: #ffffff;
+      position: relative;
+      z-index: 1;
+      .footer-text {
+        padding-top: 5em;
+        width: 100%;
+        h2 {
+          padding-bottom: 0;
+          letter-spacing: 0.05em;
+        }
+        .intro {
+          line-height: 2.25em;
+          letter-spacing: 0.28em;
+        }
+        p {
+          margin-right: -0.5em;
+          font-size: 18px;
+          padding: 5px 0;
+        }
+      }
+      .footer-ads {
+        margin: 8em 0 0;
+        padding: 0;
+      }
+      .subtitle {
+        font-size: 1.2em;
+        letter-spacing: 0.4em;
+      }
+      .title {
+        font-size: 1.8em;
+        font-weight: normal;
+        letter-spacing: 0.25em;
+      }
+      .text {
+        font-size: 1em;
+        letter-spacing: 0.08em;
+        margin-bottom: 0;
+      }
+      .box {
+        width: 18.75em;
+      }
+      .footer-refer {
+        margin: 8em 0 0;
+        padding: 0;
+        width: 100%;
+        h2 {
+          font-weight: normal;
+          font-size: 20px;
+        }
+        p {
+          text-align: left;
+          margin: 0 -0.5em 0 0;
+          font-size: 14px;
+          padding-bottom: 6px;
+        }
+      }
+      .footer-credit {
+        margin: 10em 0 0;
+        padding: 0 0 8em;
+        width: 100%;
+        h2 {
+          font-weight: normal;
+          font-size: 20px;
+        }
+        p {
+          text-align: left;
+          margin: 0 -0.5em 0 0;
+          font-size: 14px;
+          padding-bottom: 6px;
+        }
+      }
+    }
+  }
 </style>

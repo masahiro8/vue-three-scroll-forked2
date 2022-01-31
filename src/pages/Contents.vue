@@ -71,7 +71,7 @@
 <style lang="scss" scoped>
   .contents {
     padding-top: 10.25em;
-    background-image: url("~@/assets/image/background.png");
+    background-image: url("/resources/background.png");
   }
 
   .content-section {
