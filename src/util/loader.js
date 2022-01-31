@@ -22,8 +22,6 @@ export const loader = () => {
   };
 
   const getFiles = async (filesArray, callbackProcess) => {
-    console.log("filesArray", filesArray);
-
     // watch progress
     const watchLists = {};
     filesArray.forEach((file) => {

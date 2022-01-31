@@ -98,14 +98,6 @@ export const EnterState = ({
 
     // スクロール時
     if (!isFix) {
-      // console.log(
-      //   "section",
-      //   sectionTop,
-      //   sectionBottom,
-      //   "scroll",
-      //   scrollTop,
-      //   scrollBottom
-      // );
       if (sectionTop > scrollBottom && sectionBottom > scrollBottom) {
         state = STATE.UNDER;
       } else if (

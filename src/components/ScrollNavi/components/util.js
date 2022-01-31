@@ -26,7 +26,6 @@ export const ScrollSequence = () => {
       for (let i = 0; i < speed; i++) {
         const y = easeOutSine(i / speed);
         const n = (target - window.pageYOffset) * y;
-        // console.log(i, n, y);
         ys.push(n);
       }
 
@@ -51,6 +50,6 @@ export const ScrollSequence = () => {
   };
 
   return {
-    scrollTo
+    scrollTo,
   };
 };

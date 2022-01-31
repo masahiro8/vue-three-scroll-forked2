@@ -86,7 +86,6 @@
     },
     mounted() {
       watcher.setCallback(({ current, prev, next }) => {
-        // console.log(current, prev, next);
         this.navi = { current, prev, next };
       });
     },

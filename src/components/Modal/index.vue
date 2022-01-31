@@ -84,7 +84,6 @@
     },
     methods: {
       setContent(v) {
-        console.log("setContent", { ...v });
         this.content = {
           url: v.src_url,
           caption: v.caption,

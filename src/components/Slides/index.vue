@@ -95,7 +95,6 @@
         this.myCarouselData = payload.currentSlide;
       },
       onClickContent(image) {
-        console.log("onClickContent", this.type, image);
         modal.show(image);
       },
     },

@@ -121,7 +121,6 @@
           },
           // 3dにスクロール量を渡す
           scrollCallback: (v, d) => {
-            // console.log(v, d);
             scene.setMoveProgress(d);
           },
           // イベントトリガー

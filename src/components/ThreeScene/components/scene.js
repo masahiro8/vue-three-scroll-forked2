@@ -118,8 +118,6 @@ export const Scene = () => {
     const axis = new THREE.AxesHelper(200);
     scene.add(axis);
     axis.position.set(0, 0, 0);
-
-    console.log("init");
   };
 
   /**

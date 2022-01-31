@@ -146,7 +146,6 @@
       },
     },
     mounted() {
-      console.log("Three");
       const width = window.innerWidth;
       const height = window.innerHeight;
 
@@ -192,7 +191,6 @@
           },
           // 3dにスクロール量を渡す
           scrollCallback: (v, d) => {
-            // console.log(v, d);
             scene.setMoveProgress(d);
           },
           // イベントトリガー

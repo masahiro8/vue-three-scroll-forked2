@@ -35,8 +35,6 @@ export const Scene = () => {
     scene.add(axis);
     axis.position.set(0, 0, 0);
 
-    console.log("init");
-
     // レンダリング
     const nrender = () => {
       renderer.render(scene, camera);
@@ -66,7 +64,7 @@ export const Scene = () => {
     const mesh = new THREE.Mesh(
       new THREE.CylinderGeometry(10, 10, 1, 32),
       new THREE.MeshPhongMaterial({
-        color: 0x00ff7f
+        color: 0x00ff7f,
       })
     );
 
@@ -81,6 +79,6 @@ export const Scene = () => {
   return {
     init,
     setOrbitCont,
-    addPoint
+    addPoint,
   };
 };

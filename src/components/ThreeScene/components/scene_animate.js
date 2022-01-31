@@ -44,7 +44,6 @@ export const Scene = () => {
 
     // データロード
     const { model, animations, camera, mixer } = await loadGLTF(modelUrl);
-    console.log("load", camera, animations);
 
     // モデルをセット
     if (model) {
@@ -90,12 +89,9 @@ export const Scene = () => {
       if (cameraClip) {
         duration = cameraClip.duration;
       }
-      console.log("duration", duration);
     }
 
     animate();
-
-    console.log("init");
   };
 
   /**
@@ -111,7 +107,6 @@ export const Scene = () => {
    */
   const render = () => {
     const t = moveProgress * duration;
-    // console.log(t, moveProgress, duration);
     renderer.render(scene, mainCamera);
     if (animationMixer) {
       //ミキサー経過時間をセット
@@ -170,9 +165,7 @@ export const Scene = () => {
 
           resolve({ model, animations, camera, mixer });
         },
-        (error) => {
-          console.log("An error happened", error);
-        }
+        () => {}
       );
     });
   };
