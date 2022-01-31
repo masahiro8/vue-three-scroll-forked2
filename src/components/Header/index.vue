@@ -3,11 +3,11 @@
     <div>
       <img
         class="header-logo"
-        src="@/assets/image/okinawa-times-plus_logo.png"
+        :src="`./resources/okinawa-times-plus_logo.png`"
       />
     </div>
     <ul class="header-content">
-      <li><img class="icon" src="@/assets/logo.png" /></li>
+      <li><img class="icon" :src="`./resources/logo.png`" /></li>
       <li class="header-text">
         <p class="subtitle">沖縄本土復帰50周年</p>
         <p class="title">知る32軍壕</p>

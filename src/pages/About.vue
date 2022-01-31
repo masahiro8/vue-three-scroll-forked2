@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
   .about {
-    background: url("~@/assets/image/background.png");
+    background: url("/resources/background.png");
     background-size: cover;
     background-position: 50%;
     position: relative;
