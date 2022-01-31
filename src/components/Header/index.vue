@@ -1,13 +1,10 @@
 <template>
   <div class="header">
     <div>
-      <img
-        class="header-logo"
-        src="@/assets/image/okinawa-times-plus_logo.png"
-      />
+      <img class="header-logo" :src="`./images/logo_okinawa-times-plus.png`" />
     </div>
     <ul class="header-content">
-      <li><img class="icon" src="@/assets/logo.png" /></li>
+      <li><img class="icon" :src="`./images/logo.png`" /></li>
       <li class="header-text">
         <p class="subtitle">沖縄本土復帰50周年</p>
         <p class="title">知る32軍壕</p>

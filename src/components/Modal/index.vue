@@ -1,7 +1,7 @@
 <template>
   <div class="modal__overlay" :class="isShow ? 'show' : ''">
     <button class="modal__close" @click="close">
-      <img src="@/assets/close.svg" alt="" />
+      <img :src="`./images/i_close.svg`" alt="" />
     </button>
     <div class="modal">
       <div v-if="content.type === 'image'" class="modal_image">
