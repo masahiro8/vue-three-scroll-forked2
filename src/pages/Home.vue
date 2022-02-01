@@ -41,6 +41,7 @@
   import { articles } from "../assets/articles";
   import { ASSETS } from "../assets/assets";
   import { loader } from "../util/loader";
+  import { isIOS } from "../util/iOS";
   import { modal } from "../components/Modal/index.vue";
 
   const OBJECT_INFO = popups;
@@ -113,7 +114,10 @@
         return this.ASSETS.HEAD_MOVIE?.src;
       },
       getGLTFModel() {
-        return this.ASSETS.GLTF_MODEL?.src;
+        const modelSrc = isIOS()
+          ? this.ASSETS.GLTF_MODEL_IOS?.src
+          : this.ASSETS.GLTF_MODEL?.src;
+        return modelSrc;
       },
     },
     methods: {
