@@ -274,7 +274,7 @@ export const articles = [
           {
             id: 2,
             type: "video",
-            src_url: "",
+            src_url: "https://drive.google.com/uc?export=download&id=1ZMBSLxYXh-pd6iPxsO7-Czo8k33TxWLk",
             caption: "南部撤退ルート",
           },
         ],
