@@ -1,12 +1,6 @@
 <template>
   <div class="fotter">
     <div class="fotter-contents">
-      <div class="footer-text">
-        <h2>第2章への案内</h2>
-        <p class="intro">
-          &emsp;南部撤退を決めた第３２軍。２月上旬公開の第２章では、米軍の猛攻撃が続く中、どうやって南部に移動したのか。その撤退ルートを、沖縄県平和祈念資料館友の会の仲村真事務局長とたどります。海岸まで追い込まれた第３２軍の首脳や学徒たちが、どうなっていったのかについても伝えます。
-        </p>
-      </div>
       <div class="footer-refer">
         <h2>参考・引用文献（５０音順）</h2>
         <p>・朝日新聞社編「知る沖縄戦」（2021年、朝日新聞社）</p>
@@ -92,190 +86,190 @@
 </template>
 
 <style lang="scss" scoped>
-  .fotter {
-    background: url("~@/assets/image/background.png");
-    background-size: cover;
-    background-position: 50%;
-    position: relative;
+.fotter {
+  background: url("~@/assets/image/background.png");
+  background-size: cover;
+  background-position: 50%;
+  position: relative;
 
-    &::after {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.5);
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-    }
+  &::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
   }
-  .fotter-contents {
-    text-align: center;
-    color: #ffffff;
-    position: relative;
-    z-index: 1;
-    padding-bottom: 13.75em;
-    .footer-text {
-      width: 64em;
-      margin: auto;
-      padding-top: 6.5em;
-      h2 {
-        font-weight: normal;
-        line-height: 2.25em;
-        letter-spacing: 0.435em;
-      }
-      p {
-        font-size: 18px;
-        letter-spacing: 0.1em;
-        margin: 0;
-        text-align: left;
-      }
-    }
-    .intro {
+}
+.fotter-contents {
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 13.75em;
+  .footer-text {
+    width: 64em;
+    margin: auto;
+    padding-top: 6.5em;
+    h2 {
+      font-weight: normal;
       line-height: 2.25em;
       letter-spacing: 0.435em;
     }
-    .footer-refer {
-      padding-top: 6.5em;
-      width: 64em;
-      margin: auto;
-      h2 {
-        font-weight: normal;
-        line-height: 24px;
-        letter-spacing: 0.1em;
-        margin-bottom: 3em;
-      }
-      p {
-        font-size: 14px;
-        letter-spacing: 0.1em;
-        margin: 5px 0;
-        text-align: left;
-      }
+    p {
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      margin: 0;
+      text-align: left;
     }
-    .footer-credit {
-      padding-top: 8.75em;
-      width: 64em;
-      margin: auto;
+  }
+  .intro {
+    line-height: 2.25em;
+    letter-spacing: 0.435em;
+  }
+  .footer-refer {
+    padding-top: 6.5em;
+    width: 64em;
+    margin: auto;
+    h2 {
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      margin-bottom: 3em;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      margin: 5px 0;
+      text-align: left;
+    }
+  }
+  .footer-credit {
+    padding-top: 8.75em;
+    width: 64em;
+    margin: auto;
+    h2 {
+      font-weight: normal;
+      line-height: 24px;
+      letter-spacing: 0.1em;
+      margin-bottom: 3em;
+    }
+    p {
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      margin: 5px 0;
+      text-align: left;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  .footer-ads {
+    padding-top: 7.5em;
+  }
+  .subtitle {
+    font-size: 1.5em;
+    margin: 0;
+    letter-spacing: 0.435em;
+  }
+  .title {
+    font-size: 2.25em;
+    font-weight: normal;
+    margin: 0;
+    letter-spacing: 0.435em;
+  }
+  .text {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+  }
+  .box {
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    color: #2c2c2f;
+    background: #d9dccc;
+    max-width: 403px;
+    margin-top: 2.8125em;
+    img {
+      width: 80%;
+      height: auto;
+    }
+  }
+}
+@media screen and (max-width: 559px) {
+  .fotter-contents {
+    padding: 0 15px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+    .footer-text {
+      padding-top: 5em;
+      width: 100%;
       h2 {
-        font-weight: normal;
-        line-height: 24px;
-        letter-spacing: 0.1em;
-        margin-bottom: 3em;
+        padding-bottom: 0;
+        letter-spacing: 0.05em;
+      }
+      .intro {
+        line-height: 2.25em;
+        letter-spacing: 0.28em;
       }
       p {
-        font-size: 14px;
-        letter-spacing: 0.1em;
-        margin: 5px 0;
-        text-align: left;
-      }
-      span {
-        font-weight: bold;
+        margin-right: -0.5em;
+        font-size: 18px;
+        padding: 5px 0;
       }
     }
     .footer-ads {
-      padding-top: 7.5em;
+      margin: 8em 0 0;
+      padding: 0;
     }
     .subtitle {
-      font-size: 1.5em;
-      margin: 0;
-      letter-spacing: 0.435em;
+      font-size: 1.2em;
+      letter-spacing: 0.4em;
     }
     .title {
-      font-size: 2.25em;
+      font-size: 1.8em;
       font-weight: normal;
-      margin: 0;
-      letter-spacing: 0.435em;
+      letter-spacing: 0.25em;
     }
     .text {
-      font-size: 18px;
-      letter-spacing: 0.1em;
+      font-size: 1em;
+      letter-spacing: 0.08em;
+      margin-bottom: 0;
     }
     .box {
-      padding: 0.5em 1em;
-      margin: 0 auto;
-      color: #2c2c2f;
-      background: #d9dccc;
-      max-width: 403px;
-      margin-top: 2.8125em;
-      img {
-        width: 80%;
-        height: auto;
-      }
+      width: 18.75em;
     }
-  }
-  @media screen and (max-width: 559px) {
-    .fotter-contents {
-      padding: 0 15px;
-      color: #ffffff;
-      position: relative;
-      z-index: 1;
-      .footer-text {
-        padding-top: 5em;
-        width: 100%;
-        h2 {
-          padding-bottom: 0;
-          letter-spacing: 0.05em;
-        }
-        .intro {
-          line-height: 2.25em;
-          letter-spacing: 0.28em;
-        }
-        p {
-          margin-right: -0.5em;
-          font-size: 18px;
-          padding: 5px 0;
-        }
-      }
-      .footer-ads {
-        margin: 8em 0 0;
-        padding: 0;
-      }
-      .subtitle {
-        font-size: 1.2em;
-        letter-spacing: 0.4em;
-      }
-      .title {
-        font-size: 1.8em;
+    .footer-refer {
+      margin: 8em 0 0;
+      padding: 0;
+      width: 100%;
+      h2 {
         font-weight: normal;
-        letter-spacing: 0.25em;
+        font-size: 20px;
       }
-      .text {
-        font-size: 1em;
-        letter-spacing: 0.08em;
-        margin-bottom: 0;
+      p {
+        text-align: left;
+        margin: 0 -0.5em 0 0;
+        font-size: 14px;
+        padding-bottom: 6px;
       }
-      .box {
-        width: 18.75em;
+    }
+    .footer-credit {
+      margin: 10em 0 0;
+      padding: 0 0 8em;
+      width: 100%;
+      h2 {
+        font-weight: normal;
+        font-size: 20px;
       }
-      .footer-refer {
-        margin: 8em 0 0;
-        padding: 0;
-        width: 100%;
-        h2 {
-          font-weight: normal;
-          font-size: 20px;
-        }
-        p {
-          text-align: left;
-          margin: 0 -0.5em 0 0;
-          font-size: 14px;
-          padding-bottom: 6px;
-        }
-      }
-      .footer-credit {
-        margin: 10em 0 0;
-        padding: 0 0 8em;
-        width: 100%;
-        h2 {
-          font-weight: normal;
-          font-size: 20px;
-        }
-        p {
-          text-align: left;
-          margin: 0 -0.5em 0 0;
-          font-size: 14px;
-          padding-bottom: 6px;
-        }
+      p {
+        text-align: left;
+        margin: 0 -0.5em 0 0;
+        font-size: 14px;
+        padding-bottom: 6px;
       }
     }
   }
+}
 </style>
