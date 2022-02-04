@@ -5,7 +5,7 @@
       <h2 class="title">OKINAWA 第３２軍司令部壕</h2>
     </div>
     <div v-if="src" class="movie">
-      <video :src="src" muted autoplay loop></video>
+      <video :src="src" muted autoplay playsinline loop></video>
     </div>
   </div>
 </template>
