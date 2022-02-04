@@ -1,4 +1,4 @@
-export const articles = [
+export const articles_01 = [
   {
     id: 1,
     title: "３２軍とは",
@@ -10,18 +10,21 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_1.jpg",
             src_url: "body-image_1.jpg",
             caption: "３２軍の牛島満司令官（那覇市歴史博物館提供）",
           },
           {
             id: 2,
             type: "image",
+            thumb_url:"body-image_2.jpg",
             src_url: "body-image_2.jpg",
             caption: "３２軍の首脳部が写った集合写真（那覇市歴史博物館提供）",
           },
           {
             id: 3,
             type: "image",
+            thumb_url:"body-image_3.jpg",
             src_url: "body-image_3.jpg",
             caption:
               "牛島司令官が１９４５年2月15日に軍民に出した戦闘指針。「一人十殺一戦車」と記されている（那覇市歴史博物館提供）",
@@ -29,6 +32,7 @@ export const articles = [
           {
             id: 4,
             type: "image",
+            thumb_url:"body-graphic_1.png",
             src_url: "body-graphic_1.png",
             caption: "",
           },
@@ -41,6 +45,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_4.jpg",
             src_url: "body-image_4.jpg",
             caption:
               "沖縄本島に上陸した米軍（１９４５年４月１日、沖縄県公文書館所蔵）",
@@ -48,6 +53,7 @@ export const articles = [
           {
             id: 2,
             type: "image",
+            thumb_url:"body-image_5.jpg",
             src_url: "body-image_5.jpg",
             caption:
               "戦闘中の米軍海兵隊員。日本軍の狙撃兵に向かって火炎放射をしている（１９４５年５月、沖縄県公文書館所蔵）",
@@ -55,6 +61,7 @@ export const articles = [
           {
             id: 3,
             type: "image",
+            thumb_url:"body-image_6.jpg",
             src_url: "body-image_6.jpg",
             caption:
               "激しい戦闘となったシュガー・ローフ（那覇市おもろまち（１９４５年５月２３日、沖縄県公文書館所蔵）",
@@ -62,6 +69,7 @@ export const articles = [
           {
             id: 4,
             type: "image",
+            thumb_url:"body-graphic_2.png",
             src_url: "body-graphic_2.png",
             caption: "沖縄戦の経過、第３２軍の動き",
           },
@@ -80,12 +88,14 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-graphic_3.png",
             src_url: "body-graphic_3.png",
             caption: "首里の司令部壕とはどんな場所だった",
           },
           {
             id: 2,
             type: "image",
+            thumb_url:"body-graphic_4.png",
             src_url: "body-graphic_4.png",
             caption: "",
           },
@@ -98,6 +108,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_7.png",
             src_url: "body-image_7.png",
             caption:
               "３２軍司令部壕にあった縦杭。深さは約３４㍍で、１０階建てのビルの高さに相当する（米軍公文書館所蔵、牛島貞満さん提供）",
@@ -105,6 +116,7 @@ export const articles = [
           {
             id: 2,
             type: "image",
+            thumb_url:"body-image_8.jpg",
             src_url: "body-image_8.jpg",
             caption:
               "第１坑道中央にあったとされる司令官室（那覇市歴史博物館所蔵）",
@@ -112,6 +124,7 @@ export const articles = [
           {
             id: 3,
             type: "image",
+            thumb_url:"body-image_9.jpg",
             src_url: "body-image_9.jpg",
             caption:
               "第１坑道の通路。道沿いに寝台が設置されている（那覇市歴史博物館所蔵）",
@@ -135,18 +148,21 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_10.jpg",
             src_url: "body-image_10.jpg",
             caption: "留守名簿（沖縄）の表紙",
           },
           {
             id: 2,
             type: "image",
+            thumb_url:"body-image_11.jpg",
             src_url: "body-image_11.jpg",
             caption: "留守名簿（南方）の表紙",
           },
           {
             id: 3,
             type: "image",
+            thumb_url:"body-image_18.jpg",
             src_url: "body-image_18.jpg",
             caption:
               "第３２軍司令部の留守名簿に名前のある１４歳を含む女性たちが、どのようにして第３２軍経理部築城班に動員されたかが記されている＝佐治暁人氏提供",
@@ -154,6 +170,7 @@ export const articles = [
           {
             id: 4,
             type: "image",
+            thumb_url:"body-image_19.jpg",
             src_url: "body-image_19.jpg",
             caption: "",
           },
@@ -166,6 +183,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-graphic_5.png",
             src_url: "body-graphic_5.png",
             caption: "留守名簿グラフ",
           },
@@ -178,6 +196,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_12.jpg",
             src_url: "body-image_12.jpg",
             caption:
               "沖縄県の住民を集める米軍（１９４５年４月１日、沖縄県公文書館所蔵）",
@@ -191,6 +210,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_13.jpg",
             src_url: "body-image_13.jpg",
             caption:
               "米軍の上陸におびえる慶留間島の女性たち（１９４５年４月７日、沖縄県公文書館所蔵）",
@@ -198,6 +218,7 @@ export const articles = [
           {
             id: 2,
             type: "image",
+            thumb_url:"body-image_14.jpg",
             src_url: "body-image_14.jpg",
             caption:
               "米軍に投降して水を飲む女性（１９４５年５月、沖縄県公文書館所蔵）",
@@ -217,6 +238,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_15.jpg",
             src_url: "body-image_15.jpg",
             caption:
               "首里城周辺の教会。日本軍は塔を狙撃兵の隠れ家として使用した（１９４５年５月、沖縄県公文書館所蔵）",
@@ -224,6 +246,7 @@ export const articles = [
           {
             id: 2,
             type: "image",
+            thumb_url:"body-image_16.jpg",
             src_url: "body-image_16.jpg",
             caption:
               "廃墟と化した首里城。がれきの山となっている（１９４５年５月２９日、沖縄県公文書館所蔵）",
@@ -231,6 +254,7 @@ export const articles = [
           {
             id: 3,
             type: "image",
+            thumb_url:"body-graphic_6.png",
             src_url: "body-graphic_6.png",
             caption: "米軍、３２軍の動き",
           },
@@ -243,6 +267,7 @@ export const articles = [
           {
             id: 1,
             type: "image",
+            thumb_url:"body-image_16.jpg",
             src_url: "body-image_16.jpg",
             caption:
               "がれきとなった首里城の城壁。焼け残った樹木は、城を囲んでいた森の一部（１９４５年５月、沖縄県公文書館所蔵）",
@@ -250,6 +275,7 @@ export const articles = [
           {
             id: 2,
             type: "image",
+            thumb_url:"body-graphic_7.png",
             src_url: "body-graphic_7.png",
             caption: "沖縄戦の戦没者数の円グラフ",
           },
@@ -257,138 +283,5 @@ export const articles = [
       },
     ],
   },
-  {
-    id: 5,
-    title: "南部撤退のルートをたどる",
-    contents: [
-      {
-        subtitle: "明らかになった撤退ルート",
-        text: "　５月下旬、沖縄は梅雨時期。しのつく雨で洞窟内の坑道が小川のようになる中、牛島満司令官らは２７日夜、撤退を始めた。\n　目指すのは、本島南部の摩文仁（糸満市）だ。ここから直線距離で１４㌔ほどある。司令部壕の隊をいくつかに分け、米軍の攻撃が緩む夜間に後退を進めた。\n　沖縄県平和祈念資料館友の会の仲村真・事務局長によると、通ったルートの資料は乏しい。高級参謀・八原博道氏らの著書には一部が記載されているが、全体は分かっていない。\n　仲村さんは、八原氏の本に加え、司令部付きの衛兵司令で牛島司令官らと一緒に途中まで移動した濱川昌也氏の戦記、当時の道が分かる航空写真を分析。今回、現在の道をベースに、最有力と思われる撤退ルートを地図に落とし込んだ。\n　なお、このルートは牛島司令官の孫で、第３２軍司令部壕などについて調べている牛島貞満さんの見解と、おおむね一致している。",
-        images: [
-          {
-            id: 1,
-            type: "image",
-            src_url: "body-graphic_8.png",
-            caption: "第32軍首脳部の南部撤退ルート",
-          },
-          {
-            id: 2,
-            type: "video",
-            src_url: "",
-            caption: "南部撤退ルート",
-          },
-        ],
-      },
-      {
-        subtitle: "病院壕近くのルート",
-        text: "　ルートは第５坑口を出た後、金城町と繁多川に挟まれた谷間を東に進む。八原氏は本で「谷地を上がりきる」と回想したが、今も上り坂が続いている。\n　撤退した軍属の中には、第５坑口から東に進まず、南に向かい急な識名坂を通った人もいる。しかし、仲村さんは「このルートはアップダウンが激しく、司令官たちは通っていないのではないか」とみている。\n　根拠になるのは、病院壕の存在だった。東に進めば第３２師団の野戦病院があったナゲーラ壕があり、さらに宮平交差点を越えて、南に向かうと南風原の陸軍病院壕もあった。\n　仲村さんは「首里の司令部壕から頻繁に病院壕にけが人を運んでいたはずで、慣れた東の道を通った」とし、「司令官に何かあれば、すぐに病院壕へ運べる利点もある」と推測する。\n　陸軍病院壕の西には、第３２軍の経理部などがいた津嘉山司令部壕がある。牛島司令官らは２７日夜にここに到着。２晩過ごし、２９日夜に木炭のトラックで摩文仁へ向かったとされる。\n　八原氏の著書には、荒れ果てた夜道をヘッドライトなしで進み、がたがたの車が度々エンストした様子も描かれている。山川橋を越えると、ふろしき包みを持った避難民の死体を多く見たという。",
-        images: [
-          {
-            id: 1,
-            type: "image",
-            src_url: "body-image_20.jpg",
-            caption:
-              "南風原町の山川橋",
-          },
-          {
-            id: 2,
-            type: "image",
-            src_url: "body-image_21.jpg",
-            caption:
-              "南風原町の津嘉山にあった司令部壕。今は埋まっている",
-          },
-        ],
-      },
-      {
-        subtitle: "南か西か",
-        text: "　八重瀬町の東風平小辺りに着いた。ここからは具志頭方面へ南に続く道と、八重瀬岳や与座岳に近づく西ルートがある。仲村さんは、司令官らは南に進まず、西の内陸部に進んだとみる。\n　米軍の記録などを見ると、米軍は５月３１日には既に東風平から南の道路に沿って、軍の範囲を広げていた。南は米軍の包囲網に近づいてしまうため、回避した可能性があるという。\n　南西に進むと、与座岳と八重瀬岳が迫ってきた。標高はともに１６０㍍ほど。第３２軍はここに防衛ラインを引き、主要部隊を配置した。南にある摩文仁の司令部を守るため、北から迫る米軍との激戦地になった。歩兵第８９連隊の壕や慰霊碑を与座岳山中で見つけた。６月１９日には隊全員が、壕内外で自決・戦死したという。\n　しかし、仲村さんは、この一帯で生き残った兵士たちは少なくないと言う。\n　歩兵第３２連隊の第１大隊は１００人が生存し、鉄血勤皇隊だった元沖縄県知事の故大田昌秀さんも、少し北側の壕に身を隠して生き延びている。\n　なぜ、生き残る人がいたのか。仲村さんは、主要部隊には戦況の情報が入り、食料がある程度あったことを要因に挙げる。\n　そして、もう一つ。激戦地であるが故に、米軍が占領までに時間がかかったことも一因と言う。「米軍は司令官のいる摩文仁へ急いだ。全ての壕を攻撃する余裕はなかった。激戦地ではあるが、エアポケットのような場所とも言える」\n　司令官たちは、森と森の間（ワイトゥイ）を抜け、国民学校（現米須小）を通り、３０日の夜明け前に摩文仁の司令部壕に着いた。",
-        images: [
-          {
-            id: 1,
-            type: "image",
-            src_url: "body-image_22.jpg",
-            caption:
-              "糸満市の森と森の間（ワイトゥイ）。ここを牛島司令官や住民たちは通って摩文仁に向かったとみられる",
-          },
-          {
-            id: 2,
-            type: "image",
-            src_url: "body-image_23.jpg",
-            caption:
-              "激戦地とされた八重瀬岳と与座岳周辺",
-          },
-          {
-            id: 3,
-            type: "image",
-            src_url: "body-image_24.jpg",
-            caption:
-              "与座岳の山中にある歩兵第８９連隊の壕（糸満市）",
-          },
-          {
-            id: 4,
-            type: "image",
-            src_url: "body-image_25.jpg",
-            caption:
-              "故大田昌秀知事",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    id: 6,
-    title: "組織的戦闘の終焉",
-    contents: [
-      {
-        subtitle: "摩文仁の司令部壕",
-        text: "　海抜㍍の摩文仁の丘は「八九高地」と呼ばれていた。南側は太平洋が広がり、もう南下はできない。\n　司令部壕が入る洞窟は、この山の８合目辺りある。八原氏によると、自然の洞窟に手を加えたもので、はしごを下りると全長百数十㍍の空間があり、天井からは鍾乳石が下がっていた。\n　非常に狭く、狭い所は人一人がようやく通れるスペースで、司令部壕とは思えない。先遣された第３２軍の参謀が「戦闘司令所としての機能を発揮せず」と電報を送っているほどだ。\n　ただ、琉球石灰岩の固い壕。中にいれば砲撃で命を落とすことはなかった。",
-        images: [
-          {
-            id: 1,
-            type: "image",
-            src_url: "body-graphic_9.png",
-            caption: "摩文仁の第３２軍司令部壕―０１",
-          },
-          {
-            id: 2,
-            type: "image",
-            src_url: "body-image_26.jpg",
-            caption: "摩文仁の第３２軍司令部壕の入り口＝糸満市",
-          },
-          {
-            id: 3,
-            type: "image",
-            src_url: "body-image_27.jpg",
-            caption: "摩文仁の第３２軍司令部壕の内部＝糸満市、仲村真氏提供",
-          },
-        ],
-      },
-      {
-        subtitle: "犠牲になった学徒ら",
-        text: "司令官や多くの兵士は狭い司令部壕に身を隠したが、同じように首里から撤退してきた司令部の学徒たちはどうしたのか。\n　司令部壕の真下には、大きな自然壕が複数ある。高い木に覆われ、海からの風が吹き抜け、数十人は潜むことが出来そうだ。比較的年齢の高い師範学校の生徒や炊事を担った女性たちは、この場所に逃げ込んでいたとされている。\n　仲村さんは「兵士の身の回りの世話などで必要だった人たちは、近くに置いていたのではないか」とみるが、ここは安全ではなかった。米軍の砲弾や広範囲に燃え広がるナパーム弾で、多くが犠牲になった。\n　戦後半年以上たって、この場所で遺骨収集した翁長安子さん（92、那覇市）は、おびただしい数の遺体を見た。「風通しがいいので皮膚が残って、顔が分かった。まだ幼い16、17歳の子どもたちが抱き合ったまま死んでいた」。戦後この場所には納骨堂が築かれ、今も遺骨が入っている。\n　では、それ以外の学徒たちはどうしていたのか。\n　司令部壕から東に数百㍍離れた雑木林に向かった。すぐそこには崖が迫り、足の踏み位置を間違えれば海に転落する危険な場所だが、１～２人入れる小さな壕が集積していた。\n　多くの学徒は、この「学生壕」にいたという。司令部壕から離れて孤立した状態で何も分からないまま、米軍の攻撃を耐えていた姿が目に浮かんだ。そして、その多くが亡くなった。",
-        images: [
-          {
-            id: 1,
-            type: "image",
-            src_url: "body-image_28.jpg",
-            caption:
-              "司令部壕下にあった学生壕＝糸満市",
-          }
-        ],
-      },
-      {
-        subtitle: "組織的戦闘の終了",
-        text: "　米軍は６月１４日に八重瀬岳を陥落させ、１６日に与座岳を占領。１９日には、八九高地への砲撃を開始し、日本軍は追い詰められた。\n　牛島司令官は、同日、「最後迄敢闘し悠久の大義に生くべし」と最後の命令を出した。戦闘継続を意味したこの命令により、残存部隊は斬り込み、ゲリラ活動などを展開した。\n　２３日（２２日説もある）に牛島司令官と長参謀長は壕のそばで自決し、第３２軍の組織的戦闘は終了した。だが、米軍は７月２日まで掃討作戦を続け、旧日本軍と米軍の降伏調印式が行われたのは９月７日だった。",
-        images: [
-          {
-            id: 1,
-            type: "image",
-            src_url: "body-image_29.jpg",
-            caption:
-              "第３２軍司令部の慰霊碑＝糸満市",
-          }
-        ],
-      },
-    ],
-  },
+
 ];

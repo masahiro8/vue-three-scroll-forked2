@@ -21,118 +21,119 @@
   </div>
 </template>
 <script>
-  import { meta, shareUrl } from "../../constants";
-  export default {
-    data: () => {
-      return {
-        meta,
-        shareUrl,
-      };
+import { meta, shareUrl } from "../../constants";
+export default {
+  data: () => {
+    return {
+      meta,
+      shareUrl,
+    };
+  },
+  computed: {
+    twitterURL() {
+      return encodeURI(
+        `https://twitter.com/intent/tweet?url=${
+          this.shareUrl || location.href
+        }&text=${this.meta.title}`
+      );
     },
-    computed: {
-      twitterURL() {
-        return encodeURI(
-          `https://twitter.com/intent/tweet?url=${
-            this.shareUrl || location.href
-          }&text=${this.meta.title}`
-        );
-      },
-      facebookURL() {
-        return encodeURI(
-          `https://www.facebook.com/sharer/sharer.php?u=${
-            this.shareUrl || location.href
-          }&t=${this.meta.title}`
-        );
-      },
+    facebookURL() {
+      return encodeURI(
+        `https://www.facebook.com/sharer/sharer.php?u=${
+          this.shareUrl || location.href
+        }&t=${this.meta.title}`
+      );
     },
-  };
+  },
+};
 </script>
 <style lang="scss" scoped>
-  .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 48px;
-    z-index: 5;
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  z-index: 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+
+  .header-logo {
+    width: 140px;
+  }
+
+  .header-sns {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
+    padding: 0 8px;
+  }
 
-    .header-logo {
-      width: 140px;
+  .header-btn {
+    margin: 0 4px;
+    height: 32px;
+    width: 32px;
+    padding: 0;
+    background: none;
+    border: none;
+
+    img {
+      width: 100%;
     }
 
-    .header-sns {
-      display: flex;
-      padding: 0 8px;
+    &:hover {
+      cursor: pointer;
     }
-
-    .header-btn {
-      margin: 0 4px;
-      height: 32px;
-      width: 32px;
-      padding: 0;
-      background: none;
-      border: none;
-
-      img {
-        width: 100%;
-      }
-
-      &:hover {
-        cursor: pointer;
-      }
+  }
+  .header-content {
+    padding: 0;
+    margin: 0;
+    .icon {
+      width: 34px;
     }
-    .header-content {
-      padding: 0;
+    li {
+      float: left;
+      list-style: none;
+    }
+    .header-text {
+      margin-left: 0.875em;
+      color: #786b58;
+      opacity: 0.4;
+      letter-spacing: 0.435em;
+    }
+    .subtitle {
+      font-size: 9px;
       margin: 0;
-      .icon {
-        width: 34px;
-      }
-      li {
-        float: left;
-        list-style: none;
-      }
+      padding: 0;
+    }
+    .title {
+      font-size: 11px;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 559px) {
+    .header-logo {
+      width: 80px;
+    }
+
+    .header-content {
       .header-text {
-        margin-left: 0.875em;
-        color: #786b58;
-        opacity: 0.4;
-        letter-spacing: 0.435em;
+        margin-left: 2px;
+      }
+      .icon {
+        width: 32px;
       }
       .subtitle {
-        font-size: 9px;
-        margin: 0;
-        padding: 0;
+        font-size: 8px;
+        padding-top: 2px;
+        letter-spacing: 0;
       }
       .title {
-        font-size: 11px;
-        margin: 0;
-        padding: 0;
-      }
-    }
-
-    @media screen and (max-width: 559px) {
-      .header-logo {
-        width: 80px;
-      }
-
-      .header-content {
-        .header-text {
-          margin-left: 2px;
-        }
-        .icon {
-          width: 32px;
-        }
-        .subtitle {
-          font-size: 8px;
-          letter-spacing: 0;
-        }
-        .title {
-          font-size: 8px;
-        }
+        font-size: 8px;
       }
     }
   }
+}
 </style>

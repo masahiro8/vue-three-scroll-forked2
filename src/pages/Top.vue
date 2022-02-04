@@ -91,7 +91,7 @@ body {
       letter-spacing: 0.435em;
     }
     .title {
-      font-size: 1.8em;
+      font-size: 1.5em;
       font-weight: normal;
       margin: 0;
       letter-spacing: 0.25em;
