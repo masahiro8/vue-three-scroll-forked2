@@ -1,24 +1,36 @@
 # vue-three-scroll-forked3
 
-## Project setup
-```
-yarn install
-```
+# 本番データ作成手順
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+1. 最新のdevelopmentをpull
 
-### Compiles and minifies for production
-```
-yarn build
-```
+   ```
+   git pull origin development
+   ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+2. ビルドする
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+   ```
+   yarn build
+   ```
+
+3. /distディレクトリにデータが作成されるので、/distディレクトリをコピーして、次のバージョン番号名にディレクトリ名を変更
+
+   最新のバージョン名は、3ddbdemo@gmail.comのGoogle Driveにアップロードしているデータから作る
+
+   https://drive.google.com/drive/u/1/folders/1OwCdRiKaR9PoO4UNeWCk2UdYGJ8dtrGD
+
+   
+
+4. ディレクトリ名を変更したらzipに圧縮して3ddbdemo@gmail.comでGoogle Driveにアップロード
+
+   https://drive.google.com/drive/u/1/folders/1OwCdRiKaR9PoO4UNeWCk2UdYGJ8dtrGD
+
+   
+
+5. アップロードしたファイルを共有する
+
+   
+
+6. 先方にメールでファイルのurlを伝える
+
