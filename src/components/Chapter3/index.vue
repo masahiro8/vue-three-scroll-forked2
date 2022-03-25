@@ -1,6 +1,6 @@
 <template>
-  <div id="contents1" class="contents">
-    <h2 class="chapter">第１章</h2>
+  <div id="contents3" class="contents">
+    <h2 class="chapter">第３章</h2>
     <div class="content-section" v-for="item in items" :key="item.id">
       <!-- タイトル -->
       <div v-if="item.contents.length > 0">
