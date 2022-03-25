@@ -10,9 +10,9 @@ export const articles_03 = [
           {
             id: 1,
             type: "video",
-            thumb_url: "article_01.png",
+            thumb_url: "body-movie_3_1_1.jpg",
             src_url:
-              "https://drive.google.com/uc?export=download&id=1enFWNMjpLES9hUB85JYMzFdRMteMR3WV",
+              "https://drive.google.com/uc?export=download&id=1YY5o4bg3gdRmXF5NVUwo4QsweMiEoTtL",
             caption: "宮里一夫さんインタビュー",
           },
           {
@@ -127,6 +127,14 @@ export const articles_03 = [
             thumb_url: "body-graphic_3_4_1.jpg",
             src_url: "body-graphic_3_4_1.jpg",
             caption: "日吉台地下壕＝慶應義塾広報室提供",
+          },
+          {
+            id: 2,
+            type: "video",
+            thumb_url: "body-movie_3_4_1.jpg",
+            src_url:
+              "https://drive.google.com/uc?export=download&id=1oeSN_9NkHETmK-bopXQ6bYUs0DPbRtPd",
+            caption: "玉城デニー知事のインタビュー",
           },
         ],
       },
